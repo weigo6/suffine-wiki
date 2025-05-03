@@ -1,0 +1,70 @@
+site_name: Suffine Hub
+site_url: https://weigo6/github.io/suffine-wiki
+
+# Repository
+repo_name: weigo6/suffine-wiki
+repo_url: https://github.com/weigo6/suffine-wiki
+edit_uri: docs
+
+nav:
+  - 关于本站: index.md
+  - 课程学习:
+      - Matlab入门教程: notes/matlab.md
+      - 车站信号控制系统: notes/车站信号控制系统.md
+      - 城市轨道交通概论: notes/城市轨道交通概论.md
+      - 轨道交通信号基础（一）: notes/轨道交通信号基础期中.md
+      - 轨道交通信号基础（二）: notes/轨道交通信号基础期末.md
+      - 计算机网络原理: notes/计算机网络复习笔记.md
+      - 区间信号自动控制: notes/区间信号自动控制.md
+      - 苏州评弹鉴赏: notes/苏州评弹.md
+  - 开源分享:
+      - 电子名片搭建: notes/个人简历.md
+      - 卡西欧计算机使用: notes/卡西欧fx-991使用技巧.md
+      - 硬件学习笔记: notes/硬件学习笔记.md
+      - Markdown与Typora学习笔记: notes/Typora教程.md
+  - 嵌入式开发:
+      - 2024全国大学生电子设计竞赛H题: notes/24电赛H.md
+      - 蓝桥杯嵌入式学习笔记: notes/蓝桥杯嵌入式学习笔记.md
+      - 西门子杯-工业硬件研发: notes/西门子杯.md
+
+theme:
+  name: material
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+markdown_extensions:
+  #脚注支持
+  - footnotes
+  #任务列表支持
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  #数学LATEX公式支持
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - assets/extra.css
