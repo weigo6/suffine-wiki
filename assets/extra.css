@@ -1,0 +1,4 @@
+.md-header__topic:first-child {
+    font-weight: 300; /* 设置字体更细，数值越小字体越细 */
+    letter-spacing: 2px; /* 设置字间距更宽 */
+}

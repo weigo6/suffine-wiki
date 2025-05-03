@@ -1,0 +1,3915 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://weigo6/github.io/suffine-wiki/notes/%E8%A5%BF%E9%97%A8%E5%AD%90%E6%9D%AF/">
+      
+      
+        <link rel="prev" href="../%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+      
+      
+      
+      <link rel="icon" href="../../assets/favicon.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>西门子杯-工业硬件研发 - Suffine Hub</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Suffine Hub" class="md-header__button md-logo" aria-label="Suffine Hub" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Suffine Hub
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              西门子杯-工业硬件研发
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/weigo6/suffine-wiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    weigo6/suffine-wiki
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  关于本站
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../matlab/" class="md-tabs__link">
+          
+  
+  
+  课程学习
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/" class="md-tabs__link">
+          
+  
+  
+  开源分享
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../24%E7%94%B5%E8%B5%9BH/" class="md-tabs__link">
+          
+  
+  
+  嵌入式开发
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Suffine Hub" class="md-nav__button md-logo" aria-label="Suffine Hub" data-md-component="logo">
+      
+  <img src="../../assets/logo.svg" alt="logo">
+
+    </a>
+    Suffine Hub
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/weigo6/suffine-wiki" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    weigo6/suffine-wiki
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    关于本站
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    课程学习
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            课程学习
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matlab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Matlab入门教程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%BD%A6%E7%AB%99%E4%BF%A1%E5%8F%B7%E6%8E%A7%E5%88%B6%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    车站信号控制系统
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%9F%8E%E5%B8%82%E8%BD%A8%E9%81%93%E4%BA%A4%E9%80%9A%E6%A6%82%E8%AE%BA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    城市轨道交通概论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%BD%A8%E9%81%93%E4%BA%A4%E9%80%9A%E4%BF%A1%E5%8F%B7%E5%9F%BA%E7%A1%80%E6%9C%9F%E4%B8%AD/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    轨道交通信号基础（一）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%BD%A8%E9%81%93%E4%BA%A4%E9%80%9A%E4%BF%A1%E5%8F%B7%E5%9F%BA%E7%A1%80%E6%9C%9F%E6%9C%AB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    轨道交通信号基础（二）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    计算机网络原理
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8C%BA%E9%97%B4%E4%BF%A1%E5%8F%B7%E8%87%AA%E5%8A%A8%E6%8E%A7%E5%88%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    区间信号自动控制
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%8B%8F%E5%B7%9E%E8%AF%84%E5%BC%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    苏州评弹鉴赏
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    开源分享
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            开源分享
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%AA%E4%BA%BA%E7%AE%80%E5%8E%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    电子名片搭建
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%8D%A1%E8%A5%BF%E6%AC%A7fx-991%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    卡西欧计算机使用
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%A1%AC%E4%BB%B6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    硬件学习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Typora%E6%95%99%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Markdown与Typora学习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    嵌入式开发
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            嵌入式开发
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24%E7%94%B5%E8%B5%9BH/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    2024全国大学生电子设计竞赛H题
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    蓝桥杯嵌入式学习笔记
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    西门子杯-工业硬件研发
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    西门子杯-工业硬件研发
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、需求分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1、需求分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      整体需求理解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="整体需求理解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      主要需求点：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      可行性分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="可行性分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      技术可行性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济可行性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      操作可行性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      法律和环境可行性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、整体系统设计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2、整体系统设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      硬件设计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      软件设计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      结构设计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      成本与可生产性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      非功能要求
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、软硬件详细设计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3、软硬件详细设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      软件设计：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="软件设计：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      串口初始化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      发送数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      接收数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      中断处理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      模拟输入采集程序设计：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#include-stm32f1xx_halh" class="md-nav__link">
+    <span class="md-ellipsis">
+      include "stm32f1xx_hal.h"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="include &#34;stm32f1xx_hal.h&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      硬件连接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码说明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      数字量输入读取软件设计：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      硬件连接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码说明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      硬件设计：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、产品分析测试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4、产品分析测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      功能测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      性能测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      非功能测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      可生产性测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      成本验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      设计验证
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="设计验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      功能验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      性能验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      非功能验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      可生产性验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      成本验证
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      附录
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1、需求分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1、需求分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      整体需求理解
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="整体需求理解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      主要需求点：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      可行性分析
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="可行性分析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      技术可行性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      经济可行性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      操作可行性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      法律和环境可行性
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2、整体系统设计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2、整体系统设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      硬件设计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      软件设计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      结构设计
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      测试验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      成本与可生产性
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      非功能要求
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3、软硬件详细设计
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3、软硬件详细设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      软件设计：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="软件设计：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      串口初始化
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      发送数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      接收数据
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      中断处理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      模拟输入采集程序设计：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#include-stm32f1xx_halh" class="md-nav__link">
+    <span class="md-ellipsis">
+      include "stm32f1xx_hal.h"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="include &#34;stm32f1xx_hal.h&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      硬件连接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码说明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      数字量输入读取软件设计：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      硬件连接
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      代码说明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      硬件设计：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4、产品分析测试
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4、产品分析测试">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      功能测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      性能测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      非功能测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      可生产性测试
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      成本验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      设计验证
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="设计验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      功能验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      性能验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      非功能验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      可生产性验证
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      成本验证
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      附录
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><strong>2024</strong> <strong>年CIMC“西门子杯”中国智能制造挑战赛</strong> </p>
+<p><strong>智能制造创新研发类赛项：工业硬件研发方向（筹）</strong></p>
+<p><strong>设计方案模板</strong></p>
+<hr />
+<p>参赛队伍编号：xxxxxxxx</p>
+<p>撰写日期：2024年    6 月   30 日</p>
+<p>西门子杯中国智能挑战赛，是在2024年首次增加了硬件研发赛项。2024年该赛项的要求是制作一款能够与PLC进行通信，实现数字量输出功能的PLC工控板。在下文需求分析和整体系统设计中给出了今年的原题要求。</p>
+<p>本文是按照官方给出的设计方案模版要求所改写的。</p>
+<p>对于没有接触过PLC工作的小白来说，理解题目要求和编写RS485通信协议其实是存在不小的难度的，并且比赛时间正好与大部分学校的期末考试时间冲突。从最后比赛公布的全国队伍的得分表来看，实现核心功能的队伍是非常非常少的。实际上完成基础设计和基础的软件设计基本就可以拿到一个不错的名次。</p>
+<p>本文是对自己参赛的一个记录。本仓库分享了硬件设计文件（嘉立创EDA专业版文件），可作参考。</p>
+<hr />
+<p>以下模板为了便于方案评审使用，参赛队伍可在此基础上，根据情况自行增加条目和内容。请注意排版条理清晰、便于审阅。</p>
+<h2 id="1">1、需求分析</h2>
+<h3 id="_1">整体需求理解</h3>
+<p>基于给定的XX芯片，设计和制作核心板与扩展板，以实现一款基于Modbus RTU协议的工业分布式IO系统。该系统的主要目标是提供一个可靠、高效且易于扩展的工业自动化解决方案，用于实时数据采集和控制。</p>
+<h4 id="_2">主要需求点：</h4>
+<ol>
+<li><strong>核心板设计</strong>：使用单片机芯片作为主控单元，负责处理数据、通信和系统管理。</li>
+<li><strong>扩展板设计</strong>：提供多个IO接口，用于连接各种传感器和执行器。</li>
+<li><strong>Modbus RTU协议支持</strong>：确保系统能够通过Modbus RTU协议与上位机或其他设备进行通信。</li>
+<li><strong>分布式架构</strong>：支持多个IO模块的分布式部署，以适应不同的工业环境。</li>
+<li><strong>工业级可靠性</strong>：满足工业环境下的高可靠性和稳定性要求。</li>
+<li><strong>易于扩展和维护</strong>：系统设计应便于后续的扩展和维护。</li>
+</ol>
+<h3 id="_3">可行性分析</h3>
+<h4 id="_4">技术可行性</h4>
+<ol>
+<li><strong>芯片性能</strong>：单片机芯片是否具备足够的处理能力和资源（如内存、存储）来支持Modbus RTU协议的处理和IO数据的实时采集。</li>
+<li><strong>硬件设计</strong>：核心板和扩展板的设计是否能够满足工业级的物理和电气要求，如抗干扰、耐高温等。</li>
+<li><strong>软件支持</strong>：是否存在成熟的Modbus RTU协议栈，以及是否能够适配XX芯片。</li>
+<li><strong>通信接口</strong>：单片机芯片是否具备足够的通信接口（如UART、RS-485）来支持Modbus RTU通信。</li>
+</ol>
+<h4 id="_5">经济可行性</h4>
+<ol>
+<li><strong>成本分析</strong>：单片机芯片的成本是否在可接受范围内，以及核心板和扩展板的制造成本是否合理。</li>
+<li><strong>市场分析</strong>：目标市场的需求是否足够大，以及是否有竞争优势。</li>
+</ol>
+<h4 id="_6">操作可行性</h4>
+<ol>
+<li><strong>用户界面</strong>：是否需要开发易于操作的用户界面，以便用户进行配置和管理。</li>
+<li><strong>维护和升级</strong>：系统是否便于维护和升级，如固件更新、故障排查等。</li>
+</ol>
+<h4 id="_7">法律和环境可行性</h4>
+<ol>
+<li><strong>合规性</strong>：系统是否符合相关的工业标准和法规要求。</li>
+<li><strong>环境影响</strong>：产品的生产和使用是否对环境造成负面影响。</li>
+</ol>
+<p>在进行了上述需求理解和可行性分析后，可以得出以下初步结论：</p>
+<ul>
+<li>如果单片机芯片的性能、资源和接口满足要求，并且存在成熟的Modbus RTU协议栈，那么技术上是可行的。</li>
+<li>经济上，需要进一步的市场调研和成本分析来确定产品的竞争力和盈利潜力。</li>
+<li>操作上，需要考虑用户界面的设计和系统的维护策略。</li>
+<li>法律和环境上，需要确保产品符合相关标准和法规，不侵犯已有的专利设计。</li>
+</ul>
+<p>最终的可行性结论需要在详细设计和市场调研后进一步确认。</p>
+<h2 id="2">2、整体系统设计</h2>
+<p>根据赛题要求将产品设计分为核心板和功能拓展板（接口板和数字量板）。整体系统设计从硬件软件和结构</p>
+<ol>
+<li>
+<p>核心板需要引出芯片所有可用 GPIO 引脚给扩展板，核心板只负责软件功能，不负责 硬件扩展功能的实现。 </p>
+</li>
+<li>
+<p>扩展板分为 3 种： </p>
+</li>
+<li>
+<p>接口板： i. 外部 24vDC 供电，供电范围：18-36vDC。ii. 对核心板供电 5vDC。 iii. 实现 RS-485 电气接口，通过接口板，核心板可以与 ModbusRTU 主站通信。 iv. 通过连接器实现与扩展板的通信。该通信方式的电气特性与软件协议可自定 义，需确保其他扩展板能及时与 PLC 通信（延迟不超过 ModbusRTU 总线周 期与 PLC 运行周期的最小值的 50%）。</p>
+</li>
+<li>
+<p>数字量板： i. 外部 24vDC 供电，供电范围：18-36vDC。 ii. 对核心板供电 5vDC。 iii. 通过连接器实现与接口板和其他扩展板的通信。该通信方式的电气特性与软 件协议可自定义。 iv. 根据通过 iii 的扩展接口接收到的 PLC 输出指令，输出数字量信号。 v. 将输入的数字量信号通过 iii 的扩展接口传输给 PLC。 vi. 实现 8 位晶体管数字量输入与 8 位晶体管数字量输出，输入脉冲频率不低于 1Khz，输出脉冲频率不低于 5Khz，输入输出脉冲误差不超过 0.3%。 vii. 输入输出都具备 LED 提示。 viii. 数字量输出要求电气隔离，隔离度不低于 1000vDC。 </p>
+</li>
+<li>
+<p>ModbusRTU 接口需要实现下述功能： </p>
+<p>01-06，08，11，15，16 号命令字。 </p>
+<p>接收报文与发送报文的间隔时间固定且 PLC 可配置。 </p>
+<p>通信参数 PLC 可配置，最高波特率不低于 115200bps。 </p>
+</li>
+<li>
+<p>加分项：所有对外接口的 ESD 防护： </p>
+<p>a) 所有暴露金属接口（包括跟与电源、PLC、各个扩展板相互互联）能耐受±8Kv 空气放电与±2Kv 接触放电的静电测试。 </p>
+<p>b) 静电测试标准参照 EN 61000-4-2 进行: 断电情况进行静电测试，测试完成以后设 备上电，能正常工作为通过。</p>
+</li>
+</ol>
+<h4 id="_8">硬件设计</h4>
+<ol>
+<li><strong>核心板</strong>：</li>
+<li><strong>主控芯片</strong>：选择合适的芯片作为主控单元，确保其具备足够的处理能力、内存和存储资源。</li>
+<li><strong>电源管理</strong>：设计高效的电源管理模块，以适应工业环境的电源波动。</li>
+<li><strong>通信接口</strong>：集成必要的通信接口，如RS-485用于Modbus RTU通信，以及可能的以太网接口。</li>
+<li><strong>扩展接口</strong>：提供标准扩展接口，如SPI、I2C等，以便连接扩展板。</li>
+<li><strong>数字量板扩展板</strong>：</li>
+<li><strong>IO接口</strong>：设计多种IO接口，包括数字输入/输出、模拟输入/输出，以适应不同的传感器和执行器，通过设计专用的接口以连接单片机核心板。</li>
+<li><strong>隔离保护</strong>：在关键IO接口上加入隔离保护，以提高系统的抗干扰能力。</li>
+<li><strong>电源接口</strong>：提供独立的电源接口，包含独立的DC-DC电路，以便为连接的设备供电。</li>
+<li><strong>接口板扩展板</strong>：</li>
+<li><strong>拓展接口</strong>：设计RS485等串行接口。</li>
+<li><strong>连接接口</strong>：设计独立的接口以与单片机核心板匹配。</li>
+<li><strong>电源接口</strong>：提供独立的电源接口，包含独立的DC-DC电路，以便为连接的设备供电。</li>
+</ol>
+<h4 id="_9">软件设计</h4>
+<ol>
+<li><strong>操作系统</strong>：可以选择适合单片机芯片的实时操作系统（RTOS），以确保系统的实时性和稳定性。在本产品中，我们采用裸机开发的形式。</li>
+<li><strong>Modbus RTU协议栈</strong>：集成或开发Modbus RTU协议栈，确保与上位机或其他设备的可靠通信。</li>
+<li><strong>应用软件</strong>：开发应用软件，实现数据采集、处理、存储和控制逻辑。</li>
+<li><strong>用户界面</strong>：开发易于操作的用户界面，支持配置、监控和故障排查。</li>
+</ol>
+<h4 id="_10">结构设计</h4>
+<ol>
+<li><strong>机械设计</strong>：设计坚固耐用的外壳，以适应工业环境的物理冲击和振动。</li>
+<li><strong>散热设计</strong>：合理设计散热结构，确保系统在高温环境下稳定运行。</li>
+<li><strong>安装方式</strong>：提供多种安装方式，如 DIN 导轨安装，以适应不同的安装环境。</li>
+</ol>
+<h4 id="_11">测试验证</h4>
+<ol>
+<li><strong>功能测试</strong>：对系统的各项功能进行全面测试，确保符合设计要求。</li>
+<li><strong>性能测试</strong>：测试系统的实时性能、通信性能和稳定性。</li>
+<li><strong>环境测试</strong>：进行高低温、湿度、振动等环境测试，确保系统的工业级可靠性。</li>
+<li><strong>认证测试</strong>：进行必要的认证测试，如CE、UL等，确保产品符合相关标准和法规。</li>
+</ol>
+<h4 id="_12">成本与可生产性</h4>
+<ol>
+<li><strong>成本控制</strong>：在设计和选型过程中，考虑成本因素，选择性价比高的组件和材料。</li>
+<li><strong>生产工艺</strong>：选择适合的生产工艺，确保产品的可生产性和质量一致性。</li>
+<li><strong>供应链管理</strong>：建立稳定的供应链，确保原材料的供应和成本控制。</li>
+</ol>
+<h4 id="_13">非功能要求</h4>
+<ol>
+<li><strong>安全性</strong>：确保系统设计符合工业安全标准，特别是在高压、高电流环境下的安全操作。</li>
+<li><strong>可维护性</strong>：设计便于维护的系统，如模块化设计、远程固件更新等。</li>
+<li><strong>可扩展性</strong>：确保系统设计具有良好的可扩展性，便于未来功能的增加和升级。</li>
+</ol>
+<p>通过上述系统设计与选型，可以实现一款满足功能、性能要求的基于Modbus RTU的工业分布式IO系统，同时兼顾成本、可生产性、非功能等要求。设计过程中需要硬件、软件、结构、测试验证等多个团队的紧密合作，确保系统的整体性能和质量。</p>
+<h2 id="3">3、软硬件详细设计</h2>
+<h3 id="_14">软件设计：</h3>
+<p>主控芯片方面选择了意法半导体的STM32F103RCT6芯片，此处列出项目设计所用的芯片外设资源引脚列表。软件设计根据此表进行。</p>
+<p><img alt="image-20240629192209967" src="../ModebusRTU%E5%B7%A5%E6%8E%A7%E6%9D%BF.assets/image-20240629192209967.png" /></p>
+<p>RS485通信软件设计：</p>
+<h5 id="_15">串口初始化</h5>
+<ul>
+<li><strong>串口配置</strong>：配置STM32的串口参数，如波特率、数据位、停止位和校验位。</li>
+<li><strong>GPIO配置</strong>：配置控制DE和RE的GPIO引脚为输出模式。</li>
+</ul>
+<h5 id="_16">发送数据</h5>
+<ul>
+<li><strong>发送模式</strong>：通过控制DE引脚为高电平，使SP485进入发送模式。</li>
+<li><strong>数据发送</strong>：通过STM32的串口发送数据到SP485的DI引脚。</li>
+<li><strong>发送完成</strong>：发送完成后，将DE引脚置为低电平，切换到接收模式。</li>
+</ul>
+<h5 id="_17">接收数据</h5>
+<ul>
+<li><strong>接收模式</strong>：通过控制RE引脚为低电平，使SP485进入接收模式。</li>
+<li><strong>数据接收</strong>：通过STM32的串口接收数据从SP485的RO引脚。</li>
+</ul>
+<h5 id="_18">中断处理</h5>
+<ul>
+<li>
+<p><strong>发送中断</strong>：配置发送中断，当数据发送完成后触发中断，进行后续处理。</p>
+</li>
+<li>
+<p><strong>接收中断</strong>：配置接收中断，当接收到数据后触发中断，进行数据处理。</p>
+</li>
+</ul>
+<p>```c
+  #include "stm32f1xx_hal.h"</p>
+<p>#define RS485_EN_PIN GPIO_PIN_1
+  #define RS485_EN_GPIO_PORT GPIOB</p>
+<p>UART_HandleTypeDef huart1;</p>
+<p>void SystemClock_Config(void);
+  static void MX_GPIO_Init(void);
+  static void MX_USART1_UART_Init(void);</p>
+<p>void RS485_Transmit(uint8_t *pData, uint16_t Size) {
+      HAL_GPIO_WritePin(RS485_EN_GPIO_PORT, RS485_EN_PIN, GPIO_PIN_SET); // 设置为发送模式
+      HAL_UART_Transmit(&amp;huart1, pData, Size, HAL_MAX_DELAY);
+      HAL_GPIO_WritePin(RS485_EN_GPIO_PORT, RS485_EN_PIN, GPIO_PIN_RESET); // 设置为接收模式
+  }</p>
+<p>void RS485_Receive(uint8_t *pData, uint16_t Size) {
+      HAL_UART_Receive(&amp;huart1, pData, Size, HAL_MAX_DELAY);
+  }</p>
+<p>int main(void) {
+      HAL_Init();
+      SystemClock_Config();
+      MX_GPIO_Init();
+      MX_USART1_UART_Init();</p>
+<pre><code>  uint8_t receivedData[100];
+
+  while (1) {
+      RS485_Receive(receivedData, sizeof(receivedData));
+      // 这里可以添加代码处理接收到的数据
+      HAL_Delay(1000);
+  }
+</code></pre>
+<p>}</p>
+<p>void SystemClock_Config(void) {
+      // 系统时钟配置代码
+  }</p>
+<p>static void MX_USART1_UART_Init(void) {
+      huart1.Instance = USART1;
+      huart1.Init.BaudRate = 9600;
+      huart1.Init.WordLength = UART_WORDLENGTH_8B;
+      huart1.Init.StopBits = UART_STOPBITS_1;
+      huart1.Init.Parity = UART_PARITY_NONE;
+      huart1.Init.Mode = UART_MODE_TX_RX;
+      huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+      huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+      if (HAL_UART_Init(&amp;huart1) != HAL_OK) {
+          // 初始化错误处理
+      }
+  }</p>
+<p>static void MX_GPIO_Init(void) {
+      GPIO_InitTypeDef GPIO_InitStruct = {0};</p>
+<pre><code>  __HAL_RCC_GPIOB_CLK_ENABLE();
+
+  // USART1 TX/RX Pins
+  GPIO_InitStruct.Pin = GPIO_PIN_10 | GPIO_PIN_11;
+  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
+  HAL_GPIO_Init(GPIOB, &amp;GPIO_InitStruct);
+
+  // RS485 EN Pin
+  GPIO_InitStruct.Pin = RS485_EN_PIN;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(RS485_EN_GPIO_PORT, &amp;GPIO_InitStruct);
+  HAL_GPIO_WritePin(RS485_EN_GPIO_PORT, RS485_EN_PIN, GPIO_PIN_RESET); // 初始设置为接收模式
+</code></pre>
+<p>}
+  ```</p>
+<ol>
+<li><strong>USART初始化</strong>：<code>MX_USART1_UART_Init</code>函数初始化USART1接口，设置波特率为9600。</li>
+<li><strong>RS485收发控制</strong>：<code>RS485_Transmit</code>和<code>RS485_Receive</code>函数分别用于发送和接收数据，并通过PB1引脚控制RS485的收发模式。</li>
+<li><strong>主循环</strong>：在主循环中，通过<code>RS485_Receive</code>函数接收数据，并进行处理。</li>
+</ol>
+<h4 id="_19">模拟输入采集程序设计：</h4>
+<ol>
+<li>
+<p><strong>I2C初始化</strong>：<code>MX_I2C1_Init</code>函数初始化I2C1接口，设置时钟速度为100kHz。</p>
+</li>
+<li>
+<p><strong>ADS1115配置</strong>：<code>ADS1115_Config</code>函数通过I2C发送配置数据到ADS1115的配置寄存器。</p>
+</li>
+<li>
+<p><strong>读取ADC数据</strong>：<code>ADS1115_ReadADC</code>函数通过I2C读取ADS1115的转换结果寄存器，并返回16位ADC值。</p>
+</li>
+</ol>
+<p>```c
+   #include "stm32f1xx_hal.h"</p>
+<p>#define ADS1115_ADDRESS 0x48
+   #define ADS1115_CONFIG_REGISTER 0x01
+   #define ADS1115_CONVERSION_REGISTER 0x00</p>
+<p>I2C_HandleTypeDef hi2c1;</p>
+<p>void SystemClock_Config(void);
+   static void MX_GPIO_Init(void);
+   static void MX_I2C1_Init(void);</p>
+<p>void ADS1115_Config(void) {
+       uint8_t config[3] = {ADS1115_CONFIG_REGISTER, 0x84, 0x83}; // 配置寄存器数据
+       HAL_I2C_Master_Transmit(&amp;hi2c1, ADS1115_ADDRESS &lt;&lt; 1, config, 3, HAL_MAX_DELAY);
+   }</p>
+<p>int16_t ADS1115_ReadADC(void) {
+       uint8_t data[2];
+       HAL_I2C_Master_Transmit(&amp;hi2c1, ADS1115_ADDRESS &lt;&lt; 1, (uint8_t*)&amp;ADS1115_CONVERSION_REGISTER, 1, HAL_MAX_DELAY);
+       HAL_I2C_Master_Receive(&amp;hi2c1, ADS1115_ADDRESS &lt;&lt; 1, data, 2, HAL_MAX_DELAY);
+       return ((int16_t)data[0] &lt;&lt; 8) | data[1];
+   }</p>
+<p>void SystemClock_Config(void) {
+       // 系统时钟配置代码
+   }</p>
+<p>static void MX_I2C1_Init(void) {
+       hi2c1.Instance = I2C1;
+       hi2c1.Init.ClockSpeed = 100000;
+       hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+       hi2c1.Init.OwnAddress1 = 0;
+       hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+       hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+       hi2c1.Init.OwnAddress2 = 0;
+       hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+       hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+       if (HAL_I2C_Init(&amp;hi2c1) != HAL_OK) {
+           // 初始化错误处理
+       }
+   }</p>
+<p>static void MX_GPIO_Init(void) {
+       // GPIO初始化代码
+   }
+   ```</p>
+<p>数字量输出软件设计：</p>
+<p>数字量输出有8路通道，数字量输出在电路设计上做了隔离处理，当某个数字通道需要输出高电平（5V）时，在程序里将对应通道多对应的芯片引脚电平拉低即可。根据电路设计，对应通道的指示灯将会亮起。</p>
+<p>```c</p>
+<h1 id="include-stm32f1xx_halh">include "stm32f1xx_hal.h"</h1>
+<p>void SystemClock_Config(void);
+static void MX_GPIO_Init(void);</p>
+<p>void SetDigitalOutput(uint8_t channel, uint8_t state) {
+    GPIO_PinState pinState = (state == 0) ? GPIO_PIN_RESET : GPIO_PIN_SET;
+    switch (channel) {
+        case 0:
+            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_15, pinState);
+            break;
+        case 1:
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, pinState);
+            break;
+        case 2:
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, pinState);
+            break;
+        case 3:
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, pinState);
+            break;
+        case 4:
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6, pinState);
+            break;
+        case 5:
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, pinState);
+            break;
+        case 6:
+            HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, pinState);
+            break;
+        case 7:
+            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, pinState);
+            break;
+        case 8:
+            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, pinState);
+            break;
+        case 9:
+            HAL_GPIO_WritePin(GPIOC, GPIO_PIN_11, pinState);
+            break;
+        default:
+            // 错误处理
+            break;
+    }
+}</p>
+<p>int main(void) {
+    HAL_Init();
+    SystemClock_Config();
+    MX_GPIO_Init();</p>
+<pre><code>// 示例：将所有通道设置为高电平
+for (uint8_t i = 0; i &lt;= 9; i++) {
+    SetDigitalOutput(i, 1);
+}
+
+while (1) {
+    // 主循环
+}
+</code></pre>
+<p>}</p>
+<p>void SystemClock_Config(void) {
+    // 系统时钟配置代码
+}</p>
+<p>static void MX_GPIO_Init(void) {
+    GPIO_InitTypeDef GPIO_InitStruct = {0};</p>
+<pre><code>// 使能GPIO时钟
+__HAL_RCC_GPIOA_CLK_ENABLE();
+__HAL_RCC_GPIOB_CLK_ENABLE();
+__HAL_RCC_GPIOC_CLK_ENABLE();
+
+// 配置PA15
+GPIO_InitStruct.Pin = GPIO_PIN_15;
+GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+HAL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
+
+// 配置PB3, PB4, PB5, PB6, PB7, PB8
+GPIO_InitStruct.Pin = GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7 | GPIO_PIN_8;
+HAL_GPIO_Init(GPIOB, &amp;GPIO_InitStruct);
+
+// 配置PC9, PC10, PC11
+GPIO_InitStruct.Pin = GPIO_PIN_9 | GPIO_PIN_10 | GPIO_PIN_11;
+HAL_GPIO_Init(GPIOC, &amp;GPIO_InitStruct);
+</code></pre>
+<p>}
+  ```</p>
+<h4 id="_20">硬件连接</h4>
+<ul>
+<li>
+<p><strong>PA15</strong> - 数字输出通道0</p>
+</li>
+<li>
+<p><strong>PB3</strong> - 数字输出通道1</p>
+</li>
+<li>
+<p><strong>PB4</strong> - 数字输出通道2</p>
+</li>
+<li>
+<p><strong>PB5</strong> - 数字输出通道3</p>
+</li>
+<li>
+<p><strong>PB6</strong> - 数字输出通道4</p>
+</li>
+<li>
+<p><strong>PB7</strong> - 数字输出通道5</p>
+</li>
+<li>
+<p><strong>PB8</strong> - 数字输出通道6</p>
+</li>
+<li>
+<p><strong>PC9</strong> - 数字输出通道7</p>
+</li>
+<li>
+<p><strong>PC10</strong> - 数字输出通道8</p>
+</li>
+<li>
+<p><strong>PC11</strong> - 数字输出通道9</p>
+</li>
+</ul>
+<h4 id="_21">代码说明</h4>
+<pre><code>1. **GPIO初始化**：`MX_GPIO_Init`函数初始化所有指定的GPIO引脚，设置为推挽输出模式。
+2. **设置数字输出**：`SetDigitalOutput`函数根据通道号和状态设置相应的GPIO引脚状态。
+3. **主循环**：在主循环中，示例代码将所有通道设置为高电平。
+</code></pre>
+<h4 id="_22">数字量输入读取软件设计：</h4>
+<pre><code class="language-c">#include &quot;stm32f1xx_hal.h&quot;
+
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+
+uint8_t ReadDigitalInput(uint8_t channel) {
+    switch (channel) {
+        case 0:
+            return HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_12);
+        case 1:
+            return HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_13);
+        case 2:
+            return HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_14);
+        case 3:
+            return HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_15);
+        case 4:
+            return HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_8);
+        case 5:
+            return HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0);
+        case 6:
+            return HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_11);
+        case 7:
+            return HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_12);
+        default:
+            // 错误处理
+            return 0;
+    }
+}
+
+int main(void) {
+    HAL_Init();
+    SystemClock_Config();
+    MX_GPIO_Init();
+
+    while (1) {
+        // 示例：读取所有输入通道的状态并打印
+        for (uint8_t i = 0; i &lt; 8; i++) {
+            uint8_t input_state = ReadDigitalInput(i);
+            printf(&quot;Input Channel X%d: %d\n&quot;, i, input_state);
+        }
+        HAL_Delay(1000); // 每隔1秒读取一次
+    }
+}
+
+void SystemClock_Config(void) {
+    // 系统时钟配置代码
+}
+
+static void MX_GPIO_Init(void) {
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+    // 使能GPIO时钟
+    __HAL_RCC_GPIOA_CLK_ENABLE();
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+
+    // 配置PB12, PB13, PB14, PB15
+    GPIO_InitStruct.Pin = GPIO_PIN_12 | GPIO_PIN_13 | GPIO_PIN_14 | GPIO_PIN_15;
+    GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+    GPIO_InitStruct.Pull = GPIO_NOPULL; // 根据需要配置上拉或下拉
+    HAL_GPIO_Init(GPIOB, &amp;GPIO_InitStruct);
+
+    // 配置PA8
+    GPIO_InitStruct.Pin = GPIO_PIN_8;
+    HAL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
+
+    // 配置PB0
+    GPIO_InitStruct.Pin = GPIO_PIN_0;
+    HAL_GPIO_Init(GPIOB, &amp;GPIO_InitStruct);
+
+    // 配置PA11, PA12
+    GPIO_InitStruct.Pin = GPIO_PIN_11 | GPIO_PIN_12;
+    HAL_GPIO_Init(GPIOA, &amp;GPIO_InitStruct);
+}
+</code></pre>
+<h4 id="_23">硬件连接</h4>
+<ul>
+<li><strong>PB12</strong> - 输入通道X0</li>
+<li><strong>PB13</strong> - 输入通道X1</li>
+<li><strong>PB14</strong> - 输入通道X2</li>
+<li><strong>PB15</strong> - 输入通道X3</li>
+<li><strong>PA8</strong> - 输入通道X4</li>
+<li><strong>PB0</strong> - 输入通道X5</li>
+<li><strong>PA11</strong> - 输入通道X6</li>
+<li><strong>PA12</strong> - 输入通道X7</li>
+</ul>
+<h4 id="_24">代码说明</h4>
+<ol>
+<li><strong>GPIO初始化</strong>：<code>MX_GPIO_Init</code>函数初始化所有指定的GPIO引脚，设置为输入模式。</li>
+<li><strong>读取数字输入</strong>：<code>ReadDigitalInput</code>函数根据通道号读取相应的GPIO引脚状态。</li>
+<li><strong>主循环</strong>：在主循环中，示例代码读取所有输入通道的状态并打印。</li>
+</ol>
+<h3 id="_25">硬件设计：</h3>
+<ol>
+<li>核心板设计</li>
+</ol>
+<p>主控单片机选择STM32F104RCT6芯片。STM32F103RCT6，基于ARM Cortex-M3内核，具有丰富的外设接口。</p>
+<p><img alt="image-20240629192820897" src="../ModebusRTU%E5%B7%A5%E6%8E%A7%E6%9D%BF.assets/image-20240629192820897.png" /></p>
+<p>核心板能够使STM32芯片处于正常工作状态。</p>
+<p>核心板根据芯片手册进行了芯片唤醒、复位电路的设计，并引出BOOT0接口（芯片启动模式）选择。</p>
+<p>外部8MHz晶振作为主时钟源，32.768kHz晶振作为RTC（实时时钟）时钟源。</p>
+<p>核心板支持5V供电，并采用了常用的TYPE-C USB接口，板载AMS1117 LDO线性稳压器，输入端和输出端添加电容滤波，提高电源稳定性。</p>
+<p>接口方面，单独引出了SWD接口，标准2线串行调试接口（SWDIO和SWCLK），用于程序下载和调试。</p>
+<p>指示灯方面，设置了3V3芯片电源供电指示灯和程序控制灯（连接单片机PC13引脚），便于检查核心板工作状态。<img alt="image-20240629195712887" src="../ModebusRTU%E5%B7%A5%E6%8E%A7%E6%9D%BF.assets/image-20240629195712887.png" /></p>
+<ol>
+<li>接口板设计</li>
+</ol>
+<p>接口板原理图如下</p>
+<p><img alt="image-20240629194131664" src="../ModebusRTU%E5%B7%A5%E6%8E%A7%E6%9D%BF.assets/image-20240629194131664.png" /></p>
+<p>接口板在设计上引出了RS485接口，预留核心板插槽与核心板进行连接。
+   1） RS485通信接口设计：
+   SP485芯片：选择SP485作为RS485收发器，它支持半双工通信，具有良好的抗干扰能力。
+   RS485接口：使用SP485的RO（接收输出）和DI（驱动输入）引脚连接到STM32的串口接收（RX）和发送（TX）引脚。
+   DE/RE控制：SP485的DE（驱动使能）和RE（接收使能）引脚连接到STM32的GPIO引脚，用于控制发送和接收模式。</p>
+<p>2）电源电路设计：</p>
+<p>接口板设计了两种电源输入接口，一种是通过USB TYPE-C接口进行供电。</p>
+<p>另一种基于实际应用场景出发，采用了DC-DC降压电路。在DCDC芯片中，我们选择了德州仪器的TPS5450芯片。TPS5450是一款高效率的降压（Buck）转换器，适用于将较高的输入电压转换为较低的输出电压。根据合适的反馈网络设计，使得输出电压稳定在5V。</p>
+<p>DCDC电源电路在设计上运用了稳压二极管，工作电源指示灯等。</p>
+<p>核心板支持接收6-36V的电压输入。</p>
+<p><img alt="image-20240629195633414" src="../ModebusRTU%E5%B7%A5%E6%8E%A7%E6%9D%BF.assets/image-20240629195633414.png" /></p>
+<ol>
+<li>数字量板设计</li>
+</ol>
+<p>数字量板原理图设计如下：</p>
+<p><img alt="image-20240629195839079" src="../ModebusRTU%E5%B7%A5%E6%8E%A7%E6%9D%BF.assets/image-20240629195839079.png" /></p>
+<p><img alt="image-20240629195917318" src="../ModebusRTU%E5%B7%A5%E6%8E%A7%E6%9D%BF.assets/image-20240629195917318.png" /></p>
+<p><img alt="image-20240629200000090" src="../ModebusRTU%E5%B7%A5%E6%8E%A7%E6%9D%BF.assets/image-20240629200000090.png" /></p>
+<p>1）电源电路设计：
+   数字量板板设计了两种电源输入接口，一种是通过USB TYPE-C接口进行供电。</p>
+<p>另一种基于实际应用场景出发，采用了DC-DC降压电路。在DCDC芯片中，我们选择了德州仪器的TPS5450芯片。TPS5450是一款高效率的降压（Buck）转换器，适用于将较高的输入电压转换为较低的输出电压。根据合适的反馈网络设计，使得输出电压稳定在5V。</p>
+<p>DCDC电源电路在设计上运用了稳压二极管，工作电源指示灯等。
+   数字量板板载AMS1117芯片，设计了线性稳压器电路，对TPS5450前端电路输出的5V电路进行降压，输出3.3V电压给一些元件进行供电。
+   2）模拟输入设计：</p>
+<p>模拟输入电路输入通过集成运放芯片（LM358DR），采用电压跟随器电路进行隔离，后端输出连接ADS1115模数转换芯片。ADS1115 是一款低功耗、高精度的16位模数转换器（ADC），由德州仪器（Texas Instruments）生产。它采用I2C接口，适用于多种传感器信号的数字化处理，如温度、压力、电压等。ADS1115 具有内部可编程增益放大器（PGA），可调整输入范围，适用于多种应用场景。</p>
+<p>ADS1115芯片通过IIC与STM32单片机连接。</p>
+<p>3）数字量输出电路设计：</p>
+<p>数字量板有8路数字量输出，在电路设计上采用了EL3H4进口光耦芯片和ULN2003A芯片进行电气隔离。ULN2003 是一种高电压、大电流的达林顿晶体管阵列（Darlington transistor array），通常用于驱动继电器、灯泡、步进电机等高电流负载。它包含7个达林顿对，每个达林顿对可以提供高达500mA的电流，并且可以承受高达50V的电压。每路数字量输入都配备有单独的电平指示LED来指示继电器的导通状态。</p>
+<p>4）数字量输入电路设计：</p>
+<p>数字量板有8路数字量输入，在电路设计上采用了EL3H4进口光耦芯片进行电气隔离，防止输入端电压变化影响到系统正常工作，每路数字量输入都配备有单独的电平指示LED。</p>
+<p>5）与接口板类似，数字量板在设计上同样引出了RS485接口，同样预留了核心板插槽与核心板进行连接。
+   RS485通信接口设计：
+   SP485芯片：选择SP485作为RS485收发器，它支持半双工通信，具有良好的抗干扰能力。
+   RS485接口：使用SP485的RO（接收输出）和DI（驱动输入）引脚连接到STM32的串口接收（RX）和发送（TX）引脚。
+   DE/RE控制：SP485的DE（驱动使能）和RE（接收使能）引脚连接到STM32的GPIO引脚，用于控制发送和接收模式。</p>
+<p><img alt="image-20240630170902548" src="../ModebusRTU%E5%B7%A5%E6%8E%A7%E6%9D%BF.assets/image-20240630170902548.png" /></p>
+<h2 id="4">4、产品分析测试</h2>
+<h4 id="_26">功能测试</h4>
+<ol>
+<li><strong>Modbus RTU通信测试</strong>：验证系统是否能够正确解析和生成Modbus RTU协议数据，与上位机或其他设备进行有效通信。</li>
+<li><strong>IO接口测试</strong>：对所有IO接口进行测试，确保数字输入/输出、模拟输入/输出等功能正常工作。</li>
+<li><strong>控制逻辑测试</strong>：验证系统的控制逻辑是否按照设计要求执行，包括定时、计数、报警等功能。</li>
+<li><strong>用户界面测试</strong>：测试用户界面的易用性和功能完整性，确保用户可以方便地进行配置和管理。</li>
+</ol>
+<h4 id="_27">性能测试</h4>
+<ol>
+<li><strong>实时性能测试</strong>：测试系统的数据采集和处理速度，确保满足实时性要求。</li>
+<li><strong>通信性能测试</strong>：测试系统的通信速率和稳定性，包括在不同网络负载下的表现。</li>
+<li><strong>负载能力测试</strong>：测试系统在连接多个扩展板和IO设备时的性能表现。</li>
+</ol>
+<h4 id="_28">非功能测试</h4>
+<ol>
+<li><strong>可靠性测试</strong>：进行长时间运行测试，验证系统在持续工作下的稳定性和可靠性。</li>
+<li><strong>环境适应性测试</strong>：在高低温、湿度、振动等极端环境下测试系统的性能。</li>
+<li><strong>电磁兼容性（EMC）测试</strong>：测试系统在电磁干扰环境下的抗干扰能力。</li>
+</ol>
+<h4 id="_29">可生产性测试</h4>
+<ol>
+<li><strong>装配测试</strong>：验证产品的装配流程是否顺畅，是否存在装配难点。</li>
+<li><strong>焊接质量测试</strong>：使用X射线或AOI（自动光学检测）等方法检测焊接质量。</li>
+<li><strong>老化测试</strong>：对产品进行老化测试，确保在长时间使用后仍能保持性能。</li>
+</ol>
+<h4 id="_30">成本验证</h4>
+<ol>
+<li><strong>BOM成本分析</strong>：详细分析产品的物料清单（BOM）成本，确保成本控制在预算范围内。</li>
+<li><strong>生产成本分析</strong>：评估生产过程中的直接和间接成本，包括人工、设备折旧、能源消耗等。</li>
+<li><strong>市场成本对比</strong>：与市场上类似产品进行成本对比，确保产品的成本竞争力。</li>
+</ol>
+<h3 id="_31">设计验证</h3>
+<h4 id="_32">功能验证</h4>
+<ul>
+<li><strong>验证计划</strong>：制定详细的验证计划，包括测试用例、测试步骤和预期结果。</li>
+<li><strong>验证工具</strong>：使用专业的测试工具和设备，如网络分析仪、逻辑分析仪等。</li>
+<li><strong>验证环境</strong>：搭建接近实际使用环境的测试环境，包括模拟的传感器和执行器。</li>
+</ul>
+<h4 id="_33">性能验证</h4>
+<ul>
+<li><strong>基准测试</strong>：建立性能基准，对比测试结果，确保性能指标达到设计要求。</li>
+<li><strong>压力测试</strong>：在极限条件下进行压力测试，验证系统的稳定性和可靠性。</li>
+</ul>
+<h4 id="_34">非功能验证</h4>
+<ul>
+<li><strong>安全验证</strong>：进行安全评估，确保系统符合相关的安全标准和法规。</li>
+<li><strong>维护验证</strong>：验证系统的可维护性，包括故障诊断、部件更换等。</li>
+</ul>
+<h4 id="_35">可生产性验证</h4>
+<ul>
+<li><strong>工艺验证</strong>：验证生产工艺的可行性，包括焊接、组装、测试等环节。</li>
+<li><strong>质量控制</strong>：建立严格的质量控制流程，确保产品的一致性和可靠性。</li>
+</ul>
+<h4 id="_36">成本验证</h4>
+<ul>
+<li><strong>成本优化</strong>：在验证过程中寻找成本优化的机会，如替代材料、简化设计等。</li>
+<li><strong>成本跟踪</strong>：实时跟踪成本变化，确保成本控制在预期范围内。</li>
+</ul>
+<p>通过上述测试方案和设计验证，可以确保产品在功能、性能、非功能、可生产性和成本等方面满足设计要求，达到预期的市场竞争力。</p>
+<h2 id="_37">附录</h2>
+<p>成本核算表</p>
+<p>最终成本=   375  元（请按照一下表格，汇总后，填写）</p>
+<p>根据实际采购金额，BOM表成本约为227元左右，PCB制板工程费为137.6元，装配成本10元。</p>
+<table>
+<thead>
+<tr>
+<th><strong>序号</strong></th>
+<th><strong>物料类型</strong></th>
+<th><strong>物料参数</strong></th>
+<th><strong>物料型号</strong></th>
+<th><strong>数量</strong></th>
+<th><strong>备注</strong></th>
+<th><strong>采购链接/供应商合同与付款凭证</strong></th>
+<th><strong>单价</strong></th>
+<th><strong>小计</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>电容</td>
+<td>10uF</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>电容</td>
+<td>100nF</td>
+<td></td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>电容</td>
+<td>4.7uF</td>
+<td>CL10A106KP8NNNC</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>电容</td>
+<td>12pF</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>电容</td>
+<td>20pF</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>电容</td>
+<td>100nF</td>
+<td>CL10B104KB8NNNC</td>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>芯片</td>
+<td>0466.500NR</td>
+<td>0466.500NR</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>排针</td>
+<td>2.54-1*4P母</td>
+<td>2.54-1*4P母</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>排针</td>
+<td>2.54-1*2P</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td>排针</td>
+<td>PZ254-2-13-Z-8.5</td>
+<td>PZ254-2-13-Z-8.5</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11</td>
+<td>排针</td>
+<td>2.54-1*2P母</td>
+<td>2.54-1*2P母</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td>LED</td>
+<td>LED_0603-G</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>电阻</td>
+<td>4.7K</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>电阻</td>
+<td>0</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>15</td>
+<td>电阻</td>
+<td>10k</td>
+<td>0603WAF1002T5E</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td>电阻</td>
+<td>10kΩ</td>
+<td>0603WAF1002T5E</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>电阻</td>
+<td>1M</td>
+<td>0603WAF1002T5E</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td>电阻</td>
+<td>10K</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>按键</td>
+<td>Key_SMD_3x4x2</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td>LDO芯片</td>
+<td>AMS1117-3.3</td>
+<td>AMS1117-3.3</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>21</td>
+<td>芯片</td>
+<td>STM32F103RCT6</td>
+<td>STM32F103RCT6</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>22</td>
+<td>存储芯片</td>
+<td>W25Q128</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>23</td>
+<td>连接器</td>
+<td>KH-TYPE-C-2P</td>
+<td>KH-TYPE-C-2P</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>晶振</td>
+<td>32.768kHz</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>25</td>
+<td>晶振</td>
+<td>8MHz</td>
+<td>X503220MSB2GI</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>26</td>
+<td>电容</td>
+<td>10nF</td>
+<td>CC0603KRX7R9BB103</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>27</td>
+<td>电容</td>
+<td>10uF</td>
+<td>GMK325BJ106KN-T</td>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>28</td>
+<td>电容</td>
+<td>100nF</td>
+<td>TCC0603X7R104K500CT</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>29</td>
+<td>电容</td>
+<td>1.5nF</td>
+<td>CC0603KRX7R9BB152</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>30</td>
+<td>电容</td>
+<td>100pF</td>
+<td>CC0603JRNPO9BN101</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>31</td>
+<td>电容</td>
+<td>100nF</td>
+<td>CL10B104KB8NNNC</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>32</td>
+<td>电容</td>
+<td>100pF</td>
+<td>CL10C101JB8NNNC</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>33</td>
+<td>稳压器件</td>
+<td>MCC SK1045</td>
+<td>MCC SK1045</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>34</td>
+<td>稳压器件</td>
+<td>SK1045B</td>
+<td>SK1045B</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>35</td>
+<td>稳压器件</td>
+<td>SM712</td>
+<td>SM712</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>36</td>
+<td>保险丝</td>
+<td>JK-SMD0603-005</td>
+<td>JK-SMD0603-005</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>37</td>
+<td>排针</td>
+<td>B-2100S04P-A110</td>
+<td>B-2100S04P-A110</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>38</td>
+<td>排针</td>
+<td>B-2100S08P-B110</td>
+<td>B-2100S08P-B110</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>39</td>
+<td>排针</td>
+<td>PZ254-2-13-Z-8.5</td>
+<td>PZ254-2-13-Z-8.5</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>40</td>
+<td>排针</td>
+<td>2.54-1*2P母</td>
+<td>2.54-1*2P母</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>41</td>
+<td>电感</td>
+<td>15uH</td>
+<td>APS10A40M150</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>42</td>
+<td>连接器</td>
+<td>ACT45B-510-2P-TL003</td>
+<td>ACT45B-510-2P-TL003</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>43</td>
+<td>连接器</td>
+<td>XL-1608SURC-06</td>
+<td>XL-1608SURC-06</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>44</td>
+<td>连接器</td>
+<td>WJ2EDGR-5.08-2P</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>45</td>
+<td>电阻</td>
+<td>20kΩ</td>
+<td>FRC0603F2002TS</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>46</td>
+<td>电阻</td>
+<td>11.8K</td>
+<td>0603WAF1182T5E</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>47</td>
+<td>电阻</td>
+<td>6.34kΩ</td>
+<td>RS-03K6341FT</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>48</td>
+<td>电阻</td>
+<td>3.09kΩ</td>
+<td>RMC06033.09K1%N</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>49</td>
+<td>电阻</td>
+<td>2.26kΩ</td>
+<td>CR0603-FX-2261ELF</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>50</td>
+<td>电阻</td>
+<td>5.1kΩ</td>
+<td>CR0603JA0512G</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>51</td>
+<td>电阻</td>
+<td>10kΩ</td>
+<td>0603WAF1002T5E</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>52</td>
+<td>电阻</td>
+<td>120Ω</td>
+<td>0603WAF1200T5E</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>53</td>
+<td>电阻</td>
+<td>TPS5450DDAR</td>
+<td>TPS5450DDAR</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>54</td>
+<td>电阻</td>
+<td>SP485EEN-L/TR</td>
+<td>SP485EEN-L/TR</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>55</td>
+<td>USB连接器</td>
+<td>KH-TYPE-C-2P</td>
+<td>KH-TYPE-C-2P</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>56</td>
+<td>电容</td>
+<td>10nF</td>
+<td>CC0603KRX7R9BB103</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>57</td>
+<td>电容</td>
+<td>10uF</td>
+<td>GMK325BJ106KN-T</td>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>58</td>
+<td>电容</td>
+<td>100nF</td>
+<td>TCC0603X7R104K500CT</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>59</td>
+<td>电容</td>
+<td>1.5nF</td>
+<td>CC0603KRX7R9BB152</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>60</td>
+<td>电容</td>
+<td>100pF</td>
+<td>CC0603JRNPO9BN101</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>61</td>
+<td>电容</td>
+<td>100nF</td>
+<td>CL10B104KB8NNNC</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>62</td>
+<td>电容</td>
+<td>100pF</td>
+<td>CL10C101JB8NNNC</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>63</td>
+<td>电容</td>
+<td>1uF</td>
+<td>CL10A105KB8NNNC</td>
+<td>5</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>64</td>
+<td>电容</td>
+<td>10uF</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>65</td>
+<td>电容</td>
+<td>100nF</td>
+<td></td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>66</td>
+<td>连接器</td>
+<td>WJ15EDGVC-3.81-3P</td>
+<td>WJ15EDGVC-3.81-3P</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>67</td>
+<td>连接器</td>
+<td>WJ15EDGVC-3.81-9P</td>
+<td>WJ15EDGVC-3.81-9P</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>68</td>
+<td>连接器</td>
+<td>MCC SK1045</td>
+<td>MCC SK1045</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>69</td>
+<td>稳压器件</td>
+<td>SK1045B</td>
+<td>SK1045B</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>70</td>
+<td>稳压器件</td>
+<td>SM712</td>
+<td>SM712</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>71</td>
+<td>稳压器件</td>
+<td>M7</td>
+<td>M7</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>72</td>
+<td>芯片</td>
+<td>0466.500NR</td>
+<td>0466.500NR</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>73</td>
+<td>稳压器件</td>
+<td>BSMD0805-035-24V</td>
+<td>BSMD0805-035-24V</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>74</td>
+<td>保险丝</td>
+<td>JK-SMD0603-005</td>
+<td>JK-SMD0603-005</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>75</td>
+<td>排针</td>
+<td>PZ254-2-13-Z-8.5</td>
+<td>PZ254-2-13-Z-8.5</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>76</td>
+<td>排针</td>
+<td>HDR-M_2.54_1x4P</td>
+<td></td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>77</td>
+<td>连接器</td>
+<td>B-2100S02P-A110</td>
+<td>B-2100S02P-A110</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>78</td>
+<td>连接器</td>
+<td>HDR-F_2.54_2x6</td>
+<td></td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>79</td>
+<td>连接器</td>
+<td>2.54-1*2P母</td>
+<td>2.54-1*2P母</td>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>80</td>
+<td>连接器</td>
+<td>B-2100S04P-A110</td>
+<td>B-2100S04P-A110</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>81</td>
+<td>连接器</td>
+<td>B-2100S08P-B110</td>
+<td>B-2100S08P-B110</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>82</td>
+<td>继电器</td>
+<td>G5NB-1A-E DC5</td>
+<td>G5NB-1A-E DC5</td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>83</td>
+<td>电感</td>
+<td>15uH</td>
+<td>APS10A40M150</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>84</td>
+<td>芯片</td>
+<td>ACT45B-510-2P-TL003</td>
+<td>ACT45B-510-2P-TL003</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>85</td>
+<td>芯片</td>
+<td>XL-1608SURC-06</td>
+<td>XL-1608SURC-06</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>86</td>
+<td>LED</td>
+<td>NCD0603R1</td>
+<td>NCD0603R1</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>87</td>
+<td>芯片</td>
+<td>W5500</td>
+<td>W5500</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>88</td>
+<td>连接器</td>
+<td>WJ15EDGVC-3.81-6P</td>
+<td>WJ15EDGVC-3.81-6P</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>89</td>
+<td>连接器</td>
+<td>WJ2EDGR-5.08-2P</td>
+<td></td>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>90</td>
+<td>MOS管</td>
+<td>IRFZ44NPBF</td>
+<td>IRFZ44NPBF</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>91</td>
+<td>电阻</td>
+<td>4.7kΩ</td>
+<td>0603WAF4701T5E</td>
+<td>34</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>92</td>
+<td>电阻</td>
+<td>11.8K</td>
+<td>0603WAF1182T5E</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>93</td>
+<td>电阻</td>
+<td>6.34kΩ</td>
+<td>RS-03K6341FT</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>94</td>
+<td>电阻</td>
+<td>3.09kΩ</td>
+<td>RMC06033.09K1%N</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>95</td>
+<td>电阻</td>
+<td>2.26kΩ</td>
+<td>CR0603-FX-2261ELF</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>96</td>
+<td>电阻</td>
+<td>5.1kΩ</td>
+<td>CR0603JA0512G</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>97</td>
+<td>电阻</td>
+<td>10kΩ</td>
+<td>0603WAF1002T5E</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>98</td>
+<td>电阻</td>
+<td>120Ω</td>
+<td>0603WAF1200T5E</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>99</td>
+<td>电阻</td>
+<td>10kΩ</td>
+<td>RT0603BRD0710KL</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>100</td>
+<td>电阻</td>
+<td>22kΩ</td>
+<td>RT0603BRE0722KL</td>
+<td>4</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>101</td>
+<td>电阻</td>
+<td>2.2kΩ</td>
+<td>0603WAF2201T5E</td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>102</td>
+<td>电容</td>
+<td>1206W4F4701T5E</td>
+<td>1206W4F4701T5E</td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>103</td>
+<td>电阻</td>
+<td>1kΩ</td>
+<td>0603WAF4701T5E</td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>104</td>
+<td>电阻</td>
+<td>3kΩ</td>
+<td>0603WAF4701T5E</td>
+<td>8</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>105</td>
+<td>电阻</td>
+<td>470Ω</td>
+<td>0603WAF4700T5E</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>106</td>
+<td>电阻</td>
+<td>20kΩ</td>
+<td>FRC0603F2002TS</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>107</td>
+<td>芯片</td>
+<td>DSHP08TSGER</td>
+<td>DSHP08TSGER</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>108</td>
+<td>连接器</td>
+<td>B4B-XH-A(LF)(SN)</td>
+<td>B4B-XH-A(LF)(SN)</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>109</td>
+<td>连接器</td>
+<td>B3B-XH-A(LF)(SN)</td>
+<td>B3B-XH-A(LF)(SN)</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>110</td>
+<td>芯片</td>
+<td>SP485EEN-L/TR</td>
+<td>SP485EEN-L/TR</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>111</td>
+<td>芯片</td>
+<td>ADS1115IDGSR</td>
+<td>ADS1115IDGSR</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>112</td>
+<td>集成运放</td>
+<td>LM358DR</td>
+<td>LM358DR</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>113</td>
+<td>光耦</td>
+<td>EL3H4(B)(TA)-VG</td>
+<td>EL3H4(B)(TA)-VG</td>
+<td>18</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>114</td>
+<td>达林顿管</td>
+<td>ULN2003A</td>
+<td>ULN2003A</td>
+<td>2</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>115</td>
+<td>DC-DC芯片</td>
+<td>TPS5450DDAR</td>
+<td>TPS5450DDAR</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>116</td>
+<td>LDO芯片</td>
+<td>AMS1117-3.3</td>
+<td>AMS1117-3.3</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>117</td>
+<td>USB连接器</td>
+<td>KH-TYPE-C-2P</td>
+<td>KH-TYPE-C-2P</td>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>118</td>
+<td>LED</td>
+<td>NCD0603R1</td>
+<td>NCD0603R1</td>
+<td>18</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>BOM物料价格统计</p>
+<table>
+<thead>
+<tr>
+<th><strong>PCB描述</strong></th>
+<th><strong>层数</strong></th>
+<th><strong>面积(cm2)</strong></th>
+<th><strong>价格</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心板</td>
+<td>2</td>
+<td>31.1</td>
+<td>21.60</td>
+</tr>
+<tr>
+<td>接口板</td>
+<td>2</td>
+<td>71.4</td>
+<td>40.50</td>
+</tr>
+<tr>
+<td>数字量板</td>
+<td>2</td>
+<td>207.0</td>
+<td>75.51</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>总计</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>PCB价格统计</p>
+<table>
+<thead>
+<tr>
+<th><strong>PCB</strong></th>
+<th><strong>贴片点数</strong></th>
+<th><strong>插件点数</strong></th>
+<th><strong>小计</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心板</td>
+<td>138</td>
+<td>68</td>
+<td>206</td>
+</tr>
+<tr>
+<td>接口板</td>
+<td>82</td>
+<td>128</td>
+<td>210</td>
+</tr>
+<tr>
+<td>数字量板</td>
+<td>490</td>
+<td>193</td>
+<td>683</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>总计</td>
+<td>710</td>
+<td>389</td>
+<td>1099</td>
+</tr>
+</tbody>
+</table>
+<p>装配价格统计：采用亚克力切割件，10元左右成本。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "search.highlight"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
