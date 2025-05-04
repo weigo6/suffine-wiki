@@ -501,7 +501,7 @@ hold off;  % 释放当前图形
 | 蓝   | b    | 白   | w    |
 | 黄   | y    | 黑   | k    |
 
-<img src="matlab.assets/image-20241015202701368.png" alt="image-20241015202701368" style="zoom: 67%;" />
+<img src="../matlab.assets/image-20241015202701368.png" alt="image-20241015202701368" style="zoom: 67%;" />
 
 #### 图例标注
 
@@ -801,7 +801,8 @@ X2 = linspace(0, 4*pi, 10)  %起始值 终值 等分个数 生成的是行矩阵
    	1&		2&		3\\
    	4&		5&		6\\
    	7&		8&		9\\
-   \end{matrix} \right|$$，使用全下标方式取出元素“3”，使用单下标方式取出元素“8”，取出后面两行子矩阵块，使用逻辑矩阵方式取出$$
+   \end{matrix} \right|$$，使用全下标方式取出元素“3”，使用单下标方式取出元素“8”，取出后面两行子矩阵块，使用逻辑矩阵方式取出
+   $$
    \left| \begin{matrix}
 	1&		3\\
 	7&		9\\
@@ -871,7 +872,7 @@ Apower_3 = A^3 %矩阵的三次幂
 Bpower_3 = B^3
 ```
 
-8. 计算函数$$f\left( t \right) =10e^{2t}-\sin \left( 4t \right) $$的值，其中t的范围从0~20步长取0.2；$$f_1\left( t \right) $$为$$f\left( t \right) \geqslant 0$$的部分，计算$$f_1\left( t \right) $$的值。
+8. 计算函数$f\left( t \right) =10e^{2t}-\sin \left( 4t \right)$的值，其中t的范围从0~20步长取0.2；$f_1\left( t \right)$为$f\left( t \right) \geqslant 0$的部分，计算$f_1\left( t \right)$的值。
 
 ```matlab
 t = 0:0.2:20  % 从 0 到 20，步长为 0.2
@@ -879,7 +880,7 @@ f = 10 * exp(2 * t) - sin(4 * t)  % 计算函数 f(t)
 f1 = f(f >= 0)  % 筛选出 f(t) 大于等于 0 的部分
 ```
 
-9. 计算函数 $$f\left( t \right) =\sqrt{2}e^{-t}\sin \left( \pi t \right) \geqslant 0$$的值,其中t的范围从0~10步长取0.1。输出显示所有满足要求的`f`值。
+9. 计算函数 $f\left( t \right) =\sqrt{2}e^{-t}\sin \left( \pi t \right) \geqslant 0$的值,其中t的范围从0~10步长取0.1。输出显示所有满足要求的`f`值。
    提示：`find()`函数
 
 ```matlab
@@ -1063,7 +1064,7 @@ end
 
    如：function B = sortMatrix(A)
    
-   <img src="matlab.assets/image-20241028234959261.png" alt="image-20241028234959261" style="zoom: 50%;" />
+   <img src="../matlab.assets/image-20241028234959261.png" alt="image-20241028234959261" style="zoom: 50%;" />
 
 ```matlab
 function B = sortMatrix(A)
@@ -1094,10 +1095,10 @@ function B = sortMatrix(A)
 end
 ```
 
-7. 编写M脚本文件，求满足$$\sum_{i=1}^m{2^i>10000}$$的最小m值
+7. 编写M脚本文件，求满足$\sum_{i=1}^m{2^i>10000}$的最小m值
 
 ```matlab
-%求满足$$\sum_{i=1}^m{2^i>10000}$$的最小m值
+%求满足$\sum_{i=1}^m{2^i>10000}$的最小m值
 % 初始化变量
 sum = 0; % 用于存储累积和
 i = 0;   % 用于存储当前的指数
@@ -1118,14 +1119,10 @@ fprintf('满足 sum(2^i, i=1 to m) > 10000 的最小 m 值是: %d\n', i);
 8. 计算下面函数的值，给出标量x的值，调用该函数后，返回y的值。
 
 $$
-y\left( x \right) =\left\{ \begin{array}{c}
-   
+y\left( x \right) =\left\{ \begin{array}{c} 
    \cos x,  x\leqslant 0\\
-   
    -x-x^2, 0<x\leqslant 3\\
-   
    e^x+2\sqrt{x}, x>3\\
-   
    \end{array} \right.
 $$
 
@@ -1170,7 +1167,7 @@ yticks(0.95:0.05:1.05);
 
 grid on; % 添加网格
 ```
-实际运行图：<img src="matlab.assets/image17347048482790.png" alt="img" style="zoom:80%;" />
+实际运行图：<img src="../matlab.assets/image17347048482790.png" alt="img" style="zoom:80%;" />
 
 2. Stack the horizontal bar chart.堆叠水平条形图。
     ![image-20241118210727014](matlab.assets/image-20241118210727014.png)
@@ -1187,11 +1184,11 @@ subplot(1,2,2);
 barh(y,"stacked"); %barh 水平式的bar
 title("Horizontal")
 ```
-实际运行图：<img src="matlab.assets/image-20241118210804379.png" alt="image-20241118210804379" style="zoom: 80%;" />
+实际运行图：<img src="../matlab.assets/image-20241118210804379.png" alt="image-20241118210804379" style="zoom: 80%;" />
 
 3. Separat   e all the pieces in the 3D pie chart
    分离 3D 饼图中的所有部分
-    <img src="matlab.assets/image-20241118210822063.png" alt="image-20241118210822063" style="zoom:67%;" />
+    <img src="../matlab.assets/image-20241118210822063.png" alt="image-20241118210822063" style="zoom:67%;" />
 
 ```matlab
 % put your code here
@@ -1204,7 +1201,7 @@ pie(a,[0,0,0,1]);
 subplot(1,3,3);
 pie3(a,[1,1,1,1]); %3代表三维
 ```
-实际运行图：<img src="matlab.assets/image-20241118210948194.png" alt="image-20241118210948194" style="zoom:67%;" />
+实际运行图：<img src="../matlab.assets/image-20241118210948194.png" alt="image-20241118210948194" style="zoom:67%;" />
 
 4. Plot a hexagon on a polar chart
    在极坐标图上绘制六边形
@@ -1237,10 +1234,7 @@ title('极坐标图上的六边形');
 
 实际运行图：![img](matlab.assets/image17347048656080.png)
 
-5. Plot a function:$$
-   f\left( t \right) =\sin \left( \small{\frac{\pi t^2}{4}} \right) 
-   $$，Add the points sampled at 5 Hz using `stem()`
-   绘制函数图：$$f\left( t \right) =\sin \left( \small{\frac{\pi t^2}{4}} \right)$$使用 `stem()` 添加以 5 Hz 频率采样的点
+5. Plot a function:$f\left( t \right) =\sin \left( \small{\frac{\pi t^2}{4}} \right)$，Add the points sampled at 5 Hz using `stem()`绘制函数图：$f\left( t \right) =\sin \left( \small{\frac{\pi t^2}{4}} \right)$使用 `stem()` 添加以 5 Hz 频率采样的点
    ![image-20241118211107698](matlab.assets/image-20241118211107698.png)
 
 ```matlab
@@ -1282,11 +1276,11 @@ yticks(-1:0.2:1);
 grid on;
 ```
 
-实际运行图：<img src="matlab.assets/image-20241118212254167.png" alt="image-20241118212254167" style="zoom:80%;" />
+实际运行图：<img src="../matlab.assets/image-20241118212254167.png" alt="image-20241118212254167" style="zoom:80%;" />
 
-6. Various Contour PlotsCombine the contour techniques to generate a figure as shown below.
+1. Various Contour PlotsCombine the contour techniques to generate a figure as shown below.
 各种等高线图将等高线技术相结合，生成如下图所示的图形。
-<img src="matlab.assets/image-20241118212331916.png" alt="image-20241118212331916" style="zoom:80%;" />
+<img src="../matlab.assets/image-20241118212331916.png" alt="image-20241118212331916" style="zoom:80%;" />
 
 ```matlab
 % put your code here
@@ -1300,12 +1294,12 @@ colormap(jet); % 设置颜色映射为 jet
 axis square; %axis square 函数用于调整当前坐标轴的比例，使得 x 轴和 y 轴的单位长度相等
 ```
 
-实际运行图：<img src="matlab.assets/image17347049781920.png" alt="img" style="zoom: 80%;" />
+实际运行图：<img src="../matlab.assets/image17347049781920.png" alt="img" style="zoom: 80%;" />
 
 7. Consider two electrocardiogram (ECG) signals with different trends. Load the signals and plot them.
 
   考虑两个趋势不同的心电图（ECG）信号。 加载信号并绘制曲线。
-  <img src="matlab.assets/image-20241118212358437.png" alt="image-20241118212358437" style="zoom: 67%;" />
+  <img src="../matlab.assets/image-20241118212358437.png" alt="image-20241118212358437" style="zoom: 67%;" />
 
 ```matlab
 % put your code here
@@ -1457,40 +1451,40 @@ ylabel('Stock Price (dollars)');
 
    在区间 [1,2] 内创建由 5 个等距点组成的向量，并在这些点上求值。
 
-   ```matlab
-   points = linspace(1, 2, 5);  % 在区间 [1, 2] 中生成5个均匀分布的点
-   f = @(x) x.^2;  % 定义函数
-   evaluated_values = f(points);  % 计算函数值
-   ```
+```matlab
+points = linspace(1, 2, 5);  % 在区间 [1, 2] 中生成5个均匀分布的点
+f = @(x) x.^2;  % 定义函数
+evaluated_values = f(points);  % 计算函数值
+```
 
    Fit a polynomial of degree 4 to the 5 points. In general, for n points, you can fit a polynomial of degree n-1 to exactly pass through the points.在 5 个点上拟合一条阶数为 4 的多项式。 一般来说，对于 n 个点，可以拟合出一个 n-1 度的多项式来精确通过这些点。
 
-   ```matlab
-   p = polyfit(points, evaluated_values, 4);  % 拟合4次多项式
-   ```
+```matlab
+p = polyfit(points, evaluated_values, 4);  % 拟合4次多项式
+```
 
    Evaluate the original function and the polynomial fit on a finer grid of points between 1 and 3.在 1 至 3 点之间的更细网格上评估原始函数和多项式拟合。
 
-   ```matlab
-   fine_grid = linspace(1, 3, 100);   % 在区间 [1, 3] 内生成100个点
-   f_original = f(fine_grid);         % 计算原始函数值
-   f_polyfit = polyval(p, fine_grid); % 计算多项式拟合值
-   ```
+```matlab
+fine_grid = linspace(1, 3, 100);   % 在区间 [1, 3] 内生成100个点
+f_original = f(fine_grid);         % 计算原始函数值
+f_polyfit = polyval(p, fine_grid); % 计算多项式拟合值
+```
 
    Plot the function values and the polynomial fit in the wider interval [1,3], with the points used to obtain the polynomial fit highlighted as circles. The polynomial fit is good in the original [1,2] interval, but quickly diverges from the fitted function outside of that interval.在更宽的区间 [1,3] 内绘制函数值和多项式拟合图，并用圆圈标出用于获得多项式拟合的点。 在原始区间 [1,2] 内，多项式拟合效果良好，但在该区间外，拟合函数迅速发散。
 
-   ```matlab
-   figure;
-   plot(fine_grid, f_original, 'b-', 'LineWidth', 1.5); % 原始函数
-   hold on;
-   plot(fine_grid, f_polyfit, 'r--', 'LineWidth', 1.5);  % 多项式拟合
-   plot(points, evaluated_values, 'ko', 'MarkerFaceColor', 'k'); % 拟合点
-   xlabel('x');
-   ylabel('Function Value');
-   title('Polynomial Fit to Function f(x) = x^2');
-   legend('Original Function', 'Polynomial Fit', 'Fitting Points', 'Location', 'Best');
-   grid on;
-   hold off;
-   ```
+```matlab
+figure;
+plot(fine_grid, f_original, 'b-', 'LineWidth', 1.5); % 原始函数
+hold on;
+plot(fine_grid, f_polyfit, 'r--', 'LineWidth', 1.5);  % 多项式拟合
+plot(points, evaluated_values, 'ko', 'MarkerFaceColor', 'k'); % 拟合点
+xlabel('x');
+ylabel('Function Value');
+title('Polynomial Fit to Function f(x) = x^2');
+legend('Original Function', 'Polynomial Fit', 'Fitting Points', 'Location', 'Best');
+grid on;
+hold off;
+```
 
    ![image-20241221111709371](matlab.assets/image-20241221111709371.png)

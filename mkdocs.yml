@@ -17,6 +17,7 @@ nav:
       - 计算机网络原理: notes/计算机网络复习笔记.md
       - 区间信号自动控制: notes/区间信号自动控制.md
       - 苏州评弹鉴赏: notes/苏州评弹.md
+      - 毛概知识点整理备考: notes/毛概笔记期末备考.md
   - 开源分享:
       - 电子名片搭建: notes/个人简历.md
       - 卡西欧计算机使用: notes/卡西欧fx-991使用技巧.md
@@ -42,29 +43,42 @@ theme:
       primary: indigo
       accent: indigo
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/weather-sunny
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: blue
       accent: blue
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-night
         name: Switch to light mode
 
 markdown_extensions:
-  #脚注支持
+  # 脚注支持  
   - footnotes
-  #任务列表支持
+  # 任务列表支持
   - pymdownx.tasklist:
       custom_checkbox: true
-  #数学LATEX公式支持
+  # 数学 LATEX 公式支持
   - pymdownx.arithmatex:
       generic: true
+  # 代码高亮支持
+  - pymdownx.highlight:
+      anchor_linenums: true
+      linenums: true
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  #- pymdownx.details
+  - admonition  # 添加此扩展以支持注解
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # 数学公式支持
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:
   - assets/extra.css
