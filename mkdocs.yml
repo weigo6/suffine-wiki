@@ -1,5 +1,7 @@
 site_name: Suffine Hub
 site_url: https://weigo6/github.io/suffine-wiki
+site_description: Blog of luwei
+site_author: luwei
 
 # Repository
 repo_name: weigo6/suffine-wiki
@@ -9,20 +11,23 @@ edit_uri: docs
 nav:
   - 关于本站: index.md
   - 课程学习:
+      - 轨道信号专业基础:
+          - 城市轨道交通概论: notes/城市轨道交通概论.md
+          - 轨道交通信号基础（一）: notes/轨道交通信号基础期中.md
+          - 轨道交通信号基础（二）: notes/轨道交通信号基础期末.md
+          - 车站信号控制系统: notes/车站信号控制系统.md
+          - 区间信号自动控制: notes/区间信号自动控制.md
       - Matlab入门教程: notes/matlab.md
-      - 车站信号控制系统: notes/车站信号控制系统.md
-      - 城市轨道交通概论: notes/城市轨道交通概论.md
-      - 轨道交通信号基础（一）: notes/轨道交通信号基础期中.md
-      - 轨道交通信号基础（二）: notes/轨道交通信号基础期末.md
       - 计算机网络原理: notes/计算机网络复习笔记.md
-      - 区间信号自动控制: notes/区间信号自动控制.md
-      - 苏州评弹鉴赏: notes/苏州评弹.md
+      - 数字电压表设计: notes/数字电压表课程设计.md      
       - 毛概知识点整理备考: notes/毛概笔记期末备考.md
+      - 苏州评弹鉴赏: notes/苏州评弹.md
   - 开源分享:
       - 电子名片搭建: notes/个人简历.md
-      - 卡西欧计算机使用: notes/卡西欧fx-991使用技巧.md
+      - 卡西欧计算器使用: notes/卡西欧fx-991使用技巧.md
       - 硬件学习笔记: notes/硬件学习笔记.md
       - Markdown与Typora学习笔记: notes/Typora教程.md
+      - Turbot4机器人开发: notes/Turbot4机器人开发.md
   - 嵌入式开发:
       - 2024全国大学生电子设计竞赛H题: notes/24电赛H.md
       - 蓝桥杯嵌入式学习笔记: notes/蓝桥杯嵌入式学习笔记.md
@@ -30,6 +35,7 @@ nav:
 
 theme:
   name: material
+  custom_dir: docs/overrides #覆写路径
   logo: assets/logo.svg
   favicon: assets/favicon.svg
   language: zh
@@ -37,6 +43,8 @@ theme:
     - navigation.tabs
     - navigation.top
     - search.highlight
+    - content.code.copy # 代码块一键复制
+    - navigation.footer # 页脚 指向当前页面上一页和下一页的链接
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -47,11 +55,13 @@ theme:
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue
-      accent: blue
+      primary: black
+      accent: black
       toggle:
         icon: material/weather-night
         name: Switch to light mode
+
+copyright: Copyright &copy; 2024~2025 Luwei # 左下角的版权声明
 
 markdown_extensions:
   # 脚注支持  
@@ -70,8 +80,12 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
-  #- pymdownx.details
+  - pymdownx.details #可折叠细节块
   - admonition  # 添加此扩展以支持注解
+  - md_in_html  #grid等语法引入
+  - pymdownx.tabbed: #选项卡支持
+      alternate_style: true
+  - pymdownx.tilde #~~删除线引入~~
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -82,3 +96,15 @@ extra_javascript:
 
 extra_css:
   - assets/extra.css
+
+extra:
+  generator: false  #删除页脚显示“使用 MkDocs 材料制造”
+  social:
+    - icon: fontawesome/brands/weixin
+      link: https://gitee.com/weigo6/picture/raw/master/wechat.webp
+    - icon: fontawesome/brands/bilibili
+      link: https://gitee.com/weigo6
+    - icon: fontawesome/brands/gitlab
+      link: https://gitee.com/weigo6
+    - icon: fontawesome/brands/github
+      link: https://github.com/weigo6
