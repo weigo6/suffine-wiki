@@ -28,6 +28,7 @@ nav:
       - 硬件学习笔记: notes/硬件学习笔记.md
       - Markdown与Typora学习笔记: notes/Typora教程.md
       - Turbot4机器人开发: notes/Turbot4机器人开发.md
+      - 旋转音律视频稳定工具: notes/旋转音律视频稳定工具.md
   - 嵌入式开发:
       - 2024全国大学生电子设计竞赛H题: notes/24电赛H.md
       - 蓝桥杯嵌入式学习笔记: notes/蓝桥杯嵌入式学习笔记.md
@@ -103,7 +104,7 @@ extra:
     - icon: fontawesome/brands/weixin
       link: https://gitee.com/weigo6/picture/raw/master/wechat.webp
     - icon: fontawesome/brands/bilibili
-      link: https://gitee.com/weigo6
+      link: https://space.bilibili.com/512710834
     - icon: fontawesome/brands/gitlab
       link: https://gitee.com/weigo6
     - icon: fontawesome/brands/github
