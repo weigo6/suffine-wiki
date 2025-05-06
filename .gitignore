@@ -1,2 +1,4 @@
 # 忽略 site 文件夹
 site/
+.venv/
+.cache/

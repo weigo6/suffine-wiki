@@ -62,8 +62,6 @@
         }
       }
     </style>
-    <div class="links-content">
-      <div class="link-navigation">
         <div class="card">
           <img class="ava" src="https://pic4.zhimg.com/80/v2-a0456a5f527c1923f096759f2926012f_1440w.webp" /> 
           <div class="card-header">

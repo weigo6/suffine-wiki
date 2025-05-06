@@ -1,12 +1,12 @@
 site_name: Suffine Hub
-site_url: https://weigo6/github.io/suffine-wiki
+site_url: https://weigo6.github.io/suffine-wiki/
 site_description: Blog of luwei
 site_author: luwei
 
 # Repository
 repo_name: weigo6/suffine-wiki
 repo_url: https://github.com/weigo6/suffine-wiki
-edit_uri: docs
+edit_uri: edit/main/docs/
 
 nav:
   - 关于本站: index.md
@@ -54,7 +54,6 @@ theme:
     - content.code.copy # 代码块一键复制
     - content.action.edit
     - content.action.view
-    #- content.code.annotate # 代码块行号
     - navigation.footer # 页脚 指向当前页面上一页和下一页的链接
     - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
   palette:
@@ -109,6 +108,15 @@ plugins:
       enabled: true
       type: iso_date
       enable_creation_date: true
+      exclude:
+        - index.md
+        - tags.md
+        - link.md
+        - massage.md
+  # - git-committers: # 显示贡献者
+  #     repository: weigo6/suffine-wiki
+  #     branch: main
+  - git-authors: # 显示文档作者
       exclude:
         - index.md
         - tags.md
