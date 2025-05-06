@@ -1,4 +1,120 @@
+/*站点名称样式*/
 .md-header__topic:first-child {
     font-weight: 300; /* 设置字体更细，数值越小字体越细 */
     letter-spacing: 2px; /* 设置字间距更宽 */
 }
+
+/* 留言板容器样式 */
+.message-board-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9; /* 亮色模式背景色 */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 暗色模式下留言板容器样式 */
+[data-md-color-scheme="slate"] .message-board-container {
+    background-color: #333; /* 暗色模式背景色 */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* 诗歌包裹层样式 */
+.poem-wrap {
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* 诗歌边框样式 */
+.poem-border {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, #ccc, #999, #ccc);
+}
+
+/* 暗色模式下诗歌边框样式 */
+[data-md-color-scheme="slate"] .poem-border {
+    background: linear-gradient(to bottom, #666, #999, #666);
+}
+
+.poem-left {
+    left: 0;
+}
+
+.poem-right {
+    right: 0;
+}
+
+/* 留言板标题样式 */
+.message-board-title {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* 暗色模式下留言板标题样式 */
+[data-md-color-scheme="slate"] .message-board-title {
+    color: #fff;
+}
+
+/* 诗歌文本样式 */
+.poem-text {
+    font-size: 30px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+/* 暗色模式下诗歌文本样式 */
+[data-md-color-scheme="slate"] .poem-text {
+    color: #ccc;
+}
+
+/* 诗歌信息样式 */
+.poem-info {
+    font-size: 1rem;
+    color: #999;
+}
+
+/* 暗色模式下诗歌信息样式 */
+[data-md-color-scheme="slate"] .poem-info {
+    color: #999;
+}
+
+:root {
+    --admonition-border-left-width: 0.2rem;
+    --base-border-radius: 0.5rem;
+}
+
+/* Grid Cards */
+.md-typeset .grid.cards > ul > li {
+    border-radius: var(--base-border-radius);
+}
+/* .md-typeset .grid.cards > ul > li:hover {
+    box-shadow: 0 0 0.2rem #ffffff40;
+} */
+  
+/* Markdown Button */
+.md-typeset .md-button {
+    border-radius: var(--base-border-radius);
+}
+
+/* Search-Forms */
+.md-search__form {
+    border-radius: var(--base-border-radius);
+}
+
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
+    border-top-right-radius: var(--base-border-radius);
+    border-top-left-radius: var(--base-border-radius);
+}
+
+[dir="ltr"] .md-search__output {
+    border-bottom-right-radius: var(--base-border-radius);
+    border-bottom-left-radius: var(--base-border-radius);
+}
+  

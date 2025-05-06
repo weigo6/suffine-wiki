@@ -33,6 +33,11 @@ nav:
       - 2024全国大学生电子设计竞赛H题: notes/24电赛H.md
       - 蓝桥杯嵌入式学习笔记: notes/蓝桥杯嵌入式学习笔记.md
       - 西门子杯-工业硬件研发: notes/西门子杯.md
+  - 标签索引: tags.md
+  - 留言板: massage.md
+  - 友链: 
+      - 推荐: link.md
+      - 如何添加友链: notes/linktech.md
 
 theme:
   name: material
@@ -44,8 +49,14 @@ theme:
     - navigation.tabs
     - navigation.top
     - search.highlight
+    - search.suggest
+    - search.share #搜索分享按钮
     - content.code.copy # 代码块一键复制
+    - content.action.edit
+    - content.action.view
+    #- content.code.annotate # 代码块行号
     - navigation.footer # 页脚 指向当前页面上一页和下一页的链接
+    - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -87,6 +98,22 @@ markdown_extensions:
   - pymdownx.tabbed: #选项卡支持
       alternate_style: true
   - pymdownx.tilde #~~删除线引入~~
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - tags
+  - search
+  - git-revision-date-localized:
+      enabled: true
+      type: iso_date
+      enable_creation_date: true
+      exclude:
+        - index.md
+        - tags.md
+        - link.md
+        - massage.md
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
