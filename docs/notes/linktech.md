@@ -151,3 +151,14 @@ tags:
     </div> 
 </div>
 ```
+
+## 本站的友链
+```html
+<div class="card"> 
+  <img class="ava" src="https://pic1.imgdb.cn/item/681ad56458cb8da5c8e1f5aa.webp" /> 
+  <div class="card-header"> 
+    <div> <a href="sufine.top" target="_blank">Suffine Hub</a> </div> 
+    <div class="info">分享学习路程，表态生活。</div> 
+  </div> 
+</div>
+```

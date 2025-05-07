@@ -2,6 +2,11 @@
   <div id="links">
     <style>
       /* 用于大屏幕和小屏幕的通用样式 */
+      #links {
+        display: flex; /* 使用 Flexbox 布局 */
+        flex-wrap: wrap; /* 允许卡片换行 */
+        justify-content: space-between; /* 卡片之间保持间距 */
+      }
       .card {
         width: 45%;
         font-size: 1rem;
@@ -10,12 +15,6 @@
         transition-duration: 0.15s;
         margin-bottom: 1rem;
         display: flex;
-      }
-      .card:nth-child(odd) {
-        float: left;
-      }
-      .card:nth-child(even) {
-        float: right;
       }
       .card:hover {
         transform: scale(1.1);
@@ -58,7 +57,6 @@
       @media (max-width: 768px) {
         .card {
           width: 100%; /* 在小屏幕上显示为单列 */
-          float: none; /* 清除浮动 */
         }
       }
     </style>
@@ -66,16 +64,16 @@
           <img class="ava" src="https://pic4.zhimg.com/80/v2-a0456a5f527c1923f096759f2926012f_1440w.webp" /> 
           <div class="card-header">
             <div>
-              <a href="https://wcowin.work/ " target="“_blank”">Wcowin’s blog</a>
+              <a href="https://wcowin.work/ " target="_blank">Wcowin’s Web</a>
             </div>
-            <div class="info">这是一个分享技术的小站。</div>
+            <div class="info">循此苦旅，以达星辰</div>
           </div>
         </div>
         <div class="card">
           <img class="ava" src="https://resume-github.netlify.app/pic.png" /> 
           <div class="card-header">
             <div>
-              <a href="https://resume-github.netlify.app/" target="“_blank”">Resume-github</a>
+              <a href="https://resume-github.netlify.app/" target="_blank">Resume-github</a>
             </div>
             <div class="info">电子名片 Demo</div>
           </div>
