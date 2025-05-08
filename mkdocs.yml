@@ -75,7 +75,7 @@ theme:
         icon: material/weather-sunny
         name: Switch to light mode
 
-copyright: Copyright &copy; 2024~2025 Luwei # 左下角的版权声明
+copyright: Copyright &copy; 2024-2025 Luwei # 左下角的版权声明
 
 markdown_extensions:
   # 脚注支持  

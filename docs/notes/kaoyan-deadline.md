@@ -6,7 +6,7 @@ comments: true  #评论，默认不开启
 tags: 
     - 一研为定
 ---
-# 考研计划 (26考研进行时)
+# 考研计划
 
 <body>
 <center>
