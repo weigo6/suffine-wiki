@@ -1619,12 +1619,12 @@
 <p>这是一个基于Python的Rotaeno录屏稳定工具，原理和Rotaeno官方提供的Adobe After
 Effects脚本一样，是基于直播模式下录屏画面四个角的颜色来旋转帧，从而达到稳定视频画面的目的，基于<a href="https://github.com/Lawrenceeeeeeee">Lawrenceeeeeeee</a>项目的v1.3版本进行二次开发而来。</p>
 <p>原项目的修改说明：</p>
-<p>• 当前版本能完全实现原项目main.py的脚本功能，可以依照原项目的使用说明使用，当前版本项目没有对原项目的核心处理逻辑进行修改
-• 通过gui_main文件实现了图形化界面的支持
-• 图形化程序可选输入输出文件夹，具备默认输入输出文件夹选定功能
-• 图形化程序支持自动获取同工作目录或用户路径下的ffmpeg软件包路径，同时也支持用户手动选择路径
-• 图形化程序增加对圆形蒙版、方形渲染、高码率输出、v1模式等视频处理选项的支持
-• 增加对颜色方块取样区域的调整设置，以修复一些机型的录制视频处理失效的问题</p>
+<p>• 当前版本能完全实现原项目main.py的脚本功能，可以依照原项目的使用说明使用，当前版本项目没有对原项目的核心处理逻辑进行修改</p>
+<p>• 通过gui_main文件实现了图形化界面的支持</p>
+<p>• 图形化程序可选输入输出文件夹，具备默认输入输出文件夹选定功能</p>
+<p>• 图形化程序支持自动获取同工作目录或用户路径下的ffmpeg软件包路径，同时也支持用户手动选择路径</p>
+<p>• 图形化程序增加对圆形蒙版、方形渲染、高码率输出、v1模式等视频处理选项的支持</p>
+<p>• 增加对颜色方块取样区域的调整设置，以修复一些机型的录制视频处理失效的问题</p>
 <p>原项目地址：<a href="https://github.com/Lawrenceeeeeeee/python_rotaeno_stabilizer">https://github.com/Lawrenceeeeeeee/python_rotaeno_stabilizer</a></p>
 <p>联系项目原作者：Bilibili账号<a href="https://space.bilibili.com/143784401">https://space.bilibili.com/143784401</a></p>
 <p>官网关于直播模式的说明：<a href="https://www.rotaeno.com/streaming">https://www.rotaeno.com/streaming</a></p>
@@ -1643,15 +1643,11 @@ Effects脚本一样，是基于直播模式下录屏画面四个角的颜色来�
 <p>双击exe文件即可执行程序，注意不要将ffmpeg软件包的文件夹设置为输出目录。</p>
 <h3 id="_3">程序开发环境部署</h3>
 <p>如果只是使用，可直接通过exe可执行程序（windows）实现功能，无需操作下文部分。</p>
-<ol>
-<li>下载项目代码：</li>
-</ol>
+<p>1.下载项目代码：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/weigo6/python_rotaeno_stabilizer.git
 </code></pre></div></td></tr></table></div>
 <p>或者直接在本仓库界面点击Download ZIP下载然后解压</p>
-<ol>
-<li>安装依赖：</li>
-</ol>
+<p>2.安装依赖：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
@@ -1664,31 +1660,19 @@ Effects脚本一样，是基于直播模式下录屏画面四个角的颜色来�
 <a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1"># 如果需要运行GUI程序，额外安装pyside6，需要执行以下的命令。</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a>pip<span class="w"> </span>install<span class="w"> </span>pyside6
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>安装FFmpeg</li>
-</ol>
+<p>3.安装FFmpeg</p>
 <p>请在<a href="https://ffmpeg.org/download.html">FFmpeg官网</a>上下载对应的安装包。</p>
 <h2 id="_4">使用方法</h2>
 <p><strong>注意！！！</strong> 录屏前请在Rotaeno的设置中开启"直播模式"，开启后屏幕的四个角将会出现记录设备旋转角的色块。</p>
 <p>要注意视频录制的比例问题，要保证色块位置在画面四角。一些特殊比例的视频录制会在周围填充黑边导致程序无法处理。</p>
 <h3 id="_5">使用批处理脚本</h3>
-<ol>
-<li>
-<p>将待处理的视频放在<code>videos</code>目录下 (目前支持mp4, mov, avi, mkv, wmv, flv)</p>
-</li>
-<li>
-<p>启动项目：</p>
-</li>
-</ol>
+<p>1.将待处理的视频放在<code>videos</code>目录下 (目前支持mp4, mov, avi, mkv, wmv, flv)</p>
+<p>2.启动项目：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>python<span class="w"> </span>main.py
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>在<code>output</code>文件夹找渲染完成的视频</li>
-</ol>
+<p>3.在<code>output</code>文件夹找渲染完成的视频</p>
 <h3 id="_6">使用图形化界面</h3>
-<ol>
-<li>启动项目：</li>
-</ol>
+<p>启动项目：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Bash</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>python<span class="w"> </span>gui_main.py
 </code></pre></div></td></tr></table></div>
 <p>注：如果没有选择默认的输入输出文件夹的话，则默认选择当前程序所在目录下的<code>videos</code>和<code>output</code>文件夹，如果<code>output</code>文件夹不存在，程序会自动创建。</p>
@@ -1718,7 +1702,7 @@ Effects脚本一样，是基于直播模式下录屏画面四个角的颜色来�
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月6日 08:20:09">2025-05-06</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月8日 11:06:54">2025-05-08</span>
   </span>
 
     
@@ -1818,7 +1802,7 @@ Effects脚本一样，是基于直播模式下录屏画面四个角的颜色来�
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024~2025 Luwei
+      Copyright &copy; 2024-2025 Luwei
     </div>
   
   

@@ -2366,6 +2366,7 @@
 <h1 id="matlab-">Matlab 笔记---学习记录</h1>
 <hr />
 <p>1.11 writed by luwei</p>
+<p>本文相关的仓库地址：<a href="https://gitee.com/weigo6/matlab">Matlab入门学习</a></p>
 <h2 id="_1">基础语法</h2>
 <h3 id="_2">变量注释与运算符</h3>
 <h4 id="_3">清除终端内容</h4>
@@ -2671,9 +2672,9 @@ $$
 2x_1 + 3x_2 &amp;= 5 \\
 4x_1 + x_2 &amp;= 6
 \end{align*}
-$$
-我们可以将其表示为矩阵形式 \( Ax = b \)，其中：
-$$
+\]</div>
+<p>我们可以将其表示为矩阵形式 <span class="arithmatex">\( Ax = b \)</span>，其中：</p>
+<div class="arithmatex">\[
 A = \begin{bmatrix}
 2 &amp; 3 \\
 4 &amp; 1
@@ -3458,9 +3459,7 @@ b = \begin{bmatrix}
 <p>这两个函数结合使用可以方便地进行数据拟合和趋势分析。</p>
 <h2 id="_28">题目</h2>
 <h3 id="-">第一期--数组与矩阵</h3>
-<ol>
-<li>
-<p>已知变量<code>t</code>的取值范围为 0~2π
+<p>1.已知变量<code>t</code>的取值范围为 0~2π
 –产生以<code>π/4</code>为步长的行向量t1;
 –利用函数linspace函数产生10个元素的行向量t2;
 –求y1 = sin(t1),  y2 = cos(t2)；
@@ -3477,12 +3476,8 @@ b = \begin{bmatrix}
 <a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="n">y1</span><span class="p">(</span><span class="n">y1</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)=[];</span><span class="w">  </span><span class="c">%将y1中小于0的数去除</span>
 <a id="__codelineno-37-6" name="__codelineno-37-6"></a><span class="n">y2</span><span class="p">(</span><span class="n">y2</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">)=</span><span class="mi">0</span><span class="p">;</span><span class="w">  </span><span class="c">%将y2中小于0的数替换为0</span>
 </code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p>矩阵操作 
+<p>2.矩阵操作 
 <img alt="image-20241011183646687" src="../matlab.assets/image-20241011183646687.png" /></p>
-</li>
-</ol>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-38-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-38-3"> 3</a></span>
@@ -3515,9 +3510,7 @@ b = \begin{bmatrix}
 <a id="__codelineno-38-15" name="__codelineno-38-15"></a><span class="n">maxValues</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">min</span><span class="p">(</span><span class="n">A4</span><span class="p">,</span><span class="w"> </span><span class="p">[],</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span>
 <a id="__codelineno-38-16" name="__codelineno-38-16"></a><span class="n">rankA4</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">rank</span><span class="p">(</span><span class="n">A4</span><span class="p">);</span><span class="w">  </span><span class="c">%求矩阵的秩</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>矩阵产生</li>
-</ol>
+<p>3.矩阵产生</p>
 <p><img alt="image-20241016161046442" src="../matlab.assets/image-20241016161046442.png" /></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-39-1">1</a></span>
 <span class="normal"><a href="#__codelineno-39-2">2</a></span>
@@ -3531,15 +3524,12 @@ b = \begin{bmatrix}
 <a id="__codelineno-39-5" name="__codelineno-39-5"></a><span class="n">C</span><span class="p">=[</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">]</span><span class="w"> </span><span class="c">%等价写法 C=[a b]，表示按行拼接</span>
 <a id="__codelineno-39-6" name="__codelineno-39-6"></a><span class="n">D</span><span class="p">=[</span><span class="n">a</span><span class="p">;</span><span class="n">b</span><span class="p">]</span><span class="w"> </span><span class="c">%表示按列拼接</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>用<code>“from : step : to”</code>方式得到从<code>0~4π</code>步长为<code>0.4π</code>的变量<code>X1</code>；用linspace函数得到<code>0~4π</code>分成10点的变量<code>X2</code>；</li>
-</ol>
+<p>4.用<code>“from : step : to”</code>方式得到从<code>0~4π</code>步长为<code>0.4π</code>的变量<code>X1</code>；用linspace函数得到<code>0~4π</code>分成10点的变量<code>X2</code>；</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-40-1">1</a></span>
 <span class="normal"><a href="#__codelineno-40-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1"></a><span class="n">X1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">0.4</span><span class="o">*</span><span class="nb">pi</span><span class="p">:</span><span class="mi">4</span><span class="o">*</span><span class="nb">pi</span><span class="w">  </span><span class="c">%起始值 步长 终值</span>
 <a id="__codelineno-40-2" name="__codelineno-40-2"></a><span class="n">X2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">*</span><span class="nb">pi</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w">  </span><span class="c">%起始值 终值 等分个数 生成的是行矩阵</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>输入矩阵 $$
+<p>5.输入矩阵 $$
    \left| \begin{matrix}
     1&amp;      2&amp;      3\
     4&amp;      5&amp;      6\
@@ -3550,8 +3540,7 @@ b = \begin{bmatrix}
     1&amp;      3\
     7&amp;      9\
    \end{matrix} \right|
-   $$       提示：逻辑矩阵logical()函数</li>
-</ol>
+   $$       提示：逻辑矩阵logical()函数</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-41-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-41-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-41-3"> 3</a></span>
@@ -3594,14 +3583,12 @@ b = \begin{bmatrix}
 <a id="__codelineno-41-20" name="__codelineno-41-20"></a><span class="n">result</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]);</span><span class="w">  </span><span class="c">% 按列进行重塑为2x2矩阵，如果需要按行对矩阵进行转秩操作（`&#39;`）</span>
 <a id="__codelineno-41-21" name="__codelineno-41-21"></a><span class="nb">disp</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>求矩阵$$
+<p>6.求矩阵$$
 \left| \begin{matrix}
     1&amp;      3\
     5&amp;      8\
 \end{matrix} \right|
-$$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</li>
-</ol>
+$$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-42-1">1</a></span>
 <span class="normal"><a href="#__codelineno-42-2">2</a></span>
 <span class="normal"><a href="#__codelineno-42-3">3</a></span>
@@ -3614,8 +3601,7 @@ $$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</l
 <a id="__codelineno-42-5" name="__codelineno-42-5"></a><span class="n">E</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">det</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="w"> </span><span class="c">% 行列式值</span>
 <a id="__codelineno-42-6" name="__codelineno-42-6"></a><span class="n">F</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">A</span><span class="o">^</span><span class="mi">3</span><span class="w"> </span><span class="c">% 矩阵的三次幂</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>计算数组A$$
+<p>7.计算数组A$$
    \left| \begin{matrix}
     1&amp;      2&amp;      3\
     4&amp;      5&amp;      6\
@@ -3625,8 +3611,7 @@ $$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</l
     1&amp;      1&amp;      1\
     2&amp;      2&amp;      2\
     3&amp;      3&amp;      3\
-   \end{matrix} \right|$$左除、右除以及点乘和点除的行列式值和矩阵的三次幂。</li>
-</ol>
+   \end{matrix} \right|$$左除、右除以及点乘和点除的行列式值和矩阵的三次幂。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-43-1">1</a></span>
 <span class="normal"><a href="#__codelineno-43-2">2</a></span>
 <span class="normal"><a href="#__codelineno-43-3">3</a></span>
@@ -3643,19 +3628,15 @@ $$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</l
 <a id="__codelineno-43-7" name="__codelineno-43-7"></a><span class="n">Apower_3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">A</span><span class="o">^</span><span class="mi">3</span><span class="w"> </span><span class="c">%矩阵的三次幂</span>
 <a id="__codelineno-43-8" name="__codelineno-43-8"></a><span class="n">Bpower_3</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">B</span><span class="o">^</span><span class="mi">3</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>计算函数<span class="arithmatex">\(f\left( t \right) =10e^{2t}-\sin \left( 4t \right)\)</span>的值，其中t的范围从0~20步长取0.2；<span class="arithmatex">\(f_1\left( t \right)\)</span>为<span class="arithmatex">\(f\left( t \right) \geqslant 0\)</span>的部分，计算<span class="arithmatex">\(f_1\left( t \right)\)</span>的值。</li>
-</ol>
+<p>8.计算函数<span class="arithmatex">\(f\left( t \right) =10e^{2t}-\sin \left( 4t \right)\)</span>的值，其中t的范围从0~20步长取0.2；<span class="arithmatex">\(f_1\left( t \right)\)</span>为<span class="arithmatex">\(f\left( t \right) \geqslant 0\)</span>的部分，计算<span class="arithmatex">\(f_1\left( t \right)\)</span>的值。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1">1</a></span>
 <span class="normal"><a href="#__codelineno-44-2">2</a></span>
 <span class="normal"><a href="#__codelineno-44-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1"></a><span class="n">t</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">0</span><span class="p">:</span><span class="mf">0.2</span><span class="p">:</span><span class="mi">20</span><span class="w">  </span><span class="c">% 从 0 到 20，步长为 0.2</span>
 <a id="__codelineno-44-2" name="__codelineno-44-2"></a><span class="n">f</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">exp</span><span class="p">(</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nb">sin</span><span class="p">(</span><span class="mi">4</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w">  </span><span class="c">% 计算函数 f(t)</span>
 <a id="__codelineno-44-3" name="__codelineno-44-3"></a><span class="n">f1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="n">f</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="c">% 筛选出 f(t) 大于等于 0 的部分</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>计算函数 <span class="arithmatex">\(f\left( t \right) =\sqrt{2}e^{-t}\sin \left( \pi t \right) \geqslant 0\)</span>的值,其中t的范围从0~10步长取0.1。输出显示所有满足要求的<code>f</code>值。
-   提示：<code>find()</code>函数</li>
-</ol>
+<p>9.计算函数 <span class="arithmatex">\(f\left( t \right) =\sqrt{2}e^{-t}\sin \left( \pi t \right) \geqslant 0\)</span>的值,其中t的范围从0~10步长取0.1。输出显示所有满足要求的<code>f</code>值。
+   提示：<code>find()</code>函数</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-45-1">1</a></span>
 <span class="normal"><a href="#__codelineno-45-2">2</a></span>
 <span class="normal"><a href="#__codelineno-45-3">3</a></span>
@@ -3667,9 +3648,7 @@ $$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</l
 <a id="__codelineno-45-5" name="__codelineno-45-5"></a><span class="n">f_positive</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">f</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span><span class="w">  </span><span class="c">% 获取对应的 f 值</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="-m">第二期--程序与M文件</h3>
-<ol>
-<li>编写一个M函数文件，实现功能： </li>
-</ol>
+<p>1.编写一个M函数文件，实现功能： </p>
 <p>（1）没有输入量时，画出单位圆； </p>
 <p>（2）输入量是大于2的自然数N时绘制正N边形，图名应反映显示多边 形的真实边数； </p>
 <p>（3）输入量是“非自然数”或小于等于2的数时给出出错信息； </p>
@@ -3756,9 +3735,7 @@ $$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</l
 <a id="__codelineno-46-38" name="__codelineno-46-38"></a><span class="w">    </span><span class="k">end</span>
 <a id="__codelineno-46-39" name="__codelineno-46-39"></a><span class="k">end</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>编写一个程序，查找一稀疏矩阵A=[0 0 3 0;1 0 0 1;0 9 0 0;2 0 0 0]中的非零元素，要求打印出具体的值及其所在的行列位置。</li>
-</ol>
+<p>2.编写一个程序，查找一稀疏矩阵A=[0 0 3 0;1 0 0 1;0 9 0 0;2 0 0 0]中的非零元素，要求打印出具体的值及其所在的行列位置。</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-47-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-47-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-47-3"> 3</a></span>
@@ -3781,7 +3758,7 @@ $$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</l
 <a id="__codelineno-47-10" name="__codelineno-47-10"></a><span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;值: %d, 行: %d, 列: %d\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">val</span><span class="p">(</span><span class="nb">i</span><span class="p">),</span><span class="w"> </span><span class="n">row</span><span class="p">(</span><span class="nb">i</span><span class="p">),</span><span class="w"> </span><span class="n">col</span><span class="p">(</span><span class="nb">i</span><span class="p">));</span>
 <a id="__codelineno-47-11" name="__codelineno-47-11"></a><span class="k">end</span>
 </code></pre></div></td></tr></table></div>
-3. 编写一个M函数文件，生成n行m列的矩阵，n和m由输入参数代入，各
+3.编写一个M函数文件，生成n行m列的矩阵，n和m由输入参数代入，各
 元素的值等于该元素位置的行列之和。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-48-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-48-2"> 2</a></span>
@@ -3819,9 +3796,7 @@ $$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</l
 <a id="__codelineno-48-17" name="__codelineno-48-17"></a><span class="w">    </span><span class="k">end</span>
 <a id="__codelineno-48-18" name="__codelineno-48-18"></a><span class="k">end</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>编写M脚本文件，从键盘中输入学生成绩，并显示成绩等级。</li>
-</ol>
+<p>4.编写M脚本文件，从键盘中输入学生成绩，并显示成绩等级。</p>
 <table>
 <thead>
 <tr>
@@ -3900,9 +3875,7 @@ $$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</l
 <a id="__codelineno-49-23" name="__codelineno-49-23"></a><span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;成绩等级为: %s\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">grade</span><span class="p">);</span>
 <a id="__codelineno-49-24" name="__codelineno-49-24"></a><span class="k">end</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>编写M脚本文件，从键盘中输入年份，并判断显示平年还是闰年。程序 一直运行，直到没有输入 </li>
-</ol>
+<p>5.编写M脚本文件，从键盘中输入年份，并判断显示平年还是闰年。程序 一直运行，直到没有输入 </p>
 <p>注：能被4整除且不能被100整除，或能被400整除的是闰年</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-50-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-50-2"> 2</a></span>
@@ -3956,9 +3929,7 @@ $$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</l
 <a id="__codelineno-50-25" name="__codelineno-50-25"></a><span class="w">       </span><span class="k">end</span>
 <a id="__codelineno-50-26" name="__codelineno-50-26"></a><span class="w">   </span><span class="k">end</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>编写M函数文件，用for循环实现矩阵元素从小到大排序。函数的输入参 数为一个任意行任意列的二维矩阵，输出为排序后的矩阵。</li>
-</ol>
+<p>6.编写M函数文件，用for循环实现矩阵元素从小到大排序。函数的输入参 数为一个任意行任意列的二维矩阵，输出为排序后的矩阵。</p>
 <p>如：function B = sortMatrix(A)</p>
 <p><img src="../matlab.assets/image-20241028234959261.png" alt="image-20241028234959261" style="zoom: 50%;" /></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-51-1"> 1</a></span>
@@ -4013,9 +3984,7 @@ $$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</l
 <a id="__codelineno-51-25" name="__codelineno-51-25"></a><span class="w">    </span><span class="n">B</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">reshape</span><span class="p">(</span><span class="n">flatA</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="n">rows</span><span class="p">,</span><span class="w"> </span><span class="n">cols</span><span class="p">]);</span>
 <a id="__codelineno-51-26" name="__codelineno-51-26"></a><span class="k">end</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>编写M脚本文件，求满足<span class="arithmatex">\(\sum_{i=1}^m{2^i&gt;10000}\)</span>的最小m值</li>
-</ol>
+<p>7.编写M脚本文件，求满足<span class="arithmatex">\(\sum_{i=1}^m{2^i&gt;10000}\)</span>的最小m值</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-52-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-52-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-52-3"> 3</a></span>
@@ -4048,9 +4017,7 @@ $$的转置、秩、逆矩阵、矩阵的行列式值和矩阵的三次幂。</l
 <a id="__codelineno-52-15" name="__codelineno-52-15"></a><span class="c">% 输出结果</span>
 <a id="__codelineno-52-16" name="__codelineno-52-16"></a><span class="nb">fprintf</span><span class="p">(</span><span class="s">&#39;满足 sum(2^i, i=1 to m) &gt; 10000 的最小 m 值是: %d\n&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">i</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
-<ol>
-<li>计算下面函数的值，给出标量x的值，调用该函数后，返回y的值。</li>
-</ol>
+<p>8.计算下面函数的值，给出标量x的值，调用该函数后，返回y的值。</p>
 <div class="arithmatex">\[
 y\left( x \right) =\left\{ \begin{array}{c} 
    \cos x,  x\leqslant 0\\
@@ -4077,10 +4044,8 @@ y\left( x \right) =\left\{ \begin{array}{c}
 <a id="__codelineno-53-9" name="__codelineno-53-9"></a><span class="k">end</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="-_1">第三期--平面绘图</h3>
-<ol>
-<li>在[0，6π]区间内，绘制曲线  <span class="arithmatex">\(y=1-e^{-\alpha t} \cos \left(\beta t\right),\alpha =0\ldotp 3,\beta =0\ldotp 7\)</span>
-    <img alt="image-20241118210610766" src="../matlab.assets/image-20241118210610766.png" /></li>
-</ol>
+<p>1.在[0，6π]区间内，绘制曲线  <span class="arithmatex">\(y=1-e^{-\alpha t} \cos \left(\beta t\right),\alpha =0\ldotp 3,\beta =0\ldotp 7\)</span>
+    <img alt="image-20241118210610766" src="../matlab.assets/image-20241118210610766.png" /></p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-54-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-54-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-54-3"> 3</a></span>
@@ -4126,10 +4091,8 @@ y\left( x \right) =\left\{ \begin{array}{c}
 <a id="__codelineno-54-22" name="__codelineno-54-22"></a><span class="n">grid</span><span class="w"> </span><span class="s">on</span><span class="p">;</span><span class="w"> </span><span class="c">% 添加网格</span>
 </code></pre></div></td></tr></table></div>
 实际运行图：<img src="../matlab.assets/image17347048482790.png" alt="img" style="zoom:80%;" /></p>
-<ol>
-<li>Stack the horizontal bar chart.堆叠水平条形图。
-    <img alt="image-20241118210727014" src="../matlab.assets/image-20241118210727014.png" /></li>
-</ol>
+<p>2.Stack the horizontal bar chart.堆叠水平条形图。
+    <img alt="image-20241118210727014" src="../matlab.assets/image-20241118210727014.png" /></p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-55-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-55-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-55-3"> 3</a></span>
@@ -4151,11 +4114,9 @@ y\left( x \right) =\left\{ \begin{array}{c}
 <a id="__codelineno-55-10" name="__codelineno-55-10"></a><span class="nb">title</span><span class="p">(</span><span class="s">&quot;Horizontal&quot;</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 实际运行图：<img src="../matlab.assets/image-20241118210804379.png" alt="image-20241118210804379" style="zoom: 80%;" /></p>
-<ol>
-<li>Separat   e all the pieces in the 3D pie chart
+<p>3.Separate all the pieces in the 3D pie chart
    分离 3D 饼图中的所有部分
-    <img src="../matlab.assets/image-20241118210822063.png" alt="image-20241118210822063" style="zoom:67%;" /></li>
-</ol>
+    <img src="../matlab.assets/image-20241118210822063.png" alt="image-20241118210822063" style="zoom:67%;" /></p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-56-1">1</a></span>
 <span class="normal"><a href="#__codelineno-56-2">2</a></span>
 <span class="normal"><a href="#__codelineno-56-3">3</a></span>
@@ -4175,11 +4136,9 @@ y\left( x \right) =\left\{ \begin{array}{c}
 <a id="__codelineno-56-9" name="__codelineno-56-9"></a><span class="nb">pie3</span><span class="p">(</span><span class="n">a</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]);</span><span class="w"> </span><span class="c">%3代表三维</span>
 </code></pre></div></td></tr></table></div>
 实际运行图：<img src="../matlab.assets/image-20241118210948194.png" alt="image-20241118210948194" style="zoom:67%;" /></p>
-<ol>
-<li>Plot a hexagon on a polar chart
+<p>4.Plot a hexagon on a polar chart
    在极坐标图上绘制六边形
-    <img alt="image-20241118211033046" src="../matlab.assets/image-20241118211033046.png" /></li>
-</ol>
+    <img alt="image-20241118211033046" src="../matlab.assets/image-20241118211033046.png" /></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-57-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-57-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-57-3"> 3</a></span>
@@ -4225,10 +4184,8 @@ y\left( x \right) =\left\{ \begin{array}{c}
 <a id="__codelineno-57-22" name="__codelineno-57-22"></a><span class="c">%&#39;LineWidth&#39;, 1 设置了线条的宽度，使图形更清晰。</span>
 </code></pre></div></td></tr></table></div>
 <p>实际运行图：<img alt="img" src="../matlab.assets/image17347048656080.png" /></p>
-<ol>
-<li>Plot a function:<span class="arithmatex">\(f\left( t \right) =\sin \left( \small{\frac{\pi t^2}{4}} \right)\)</span>，Add the points sampled at 5 Hz using <code>stem()</code>绘制函数图：<span class="arithmatex">\(f\left( t \right) =\sin \left( \small{\frac{\pi t^2}{4}} \right)\)</span>使用 <code>stem()</code> 添加以 5 Hz 频率采样的点
-   <img alt="image-20241118211107698" src="../matlab.assets/image-20241118211107698.png" /></li>
-</ol>
+<p>5.Plot a function:<span class="arithmatex">\(f\left( t \right) =\sin \left( \small{\frac{\pi t^2}{4}} \right)\)</span>，Add the points sampled at 5 Hz using <code>stem()</code>绘制函数图：<span class="arithmatex">\(f\left( t \right) =\sin \left( \small{\frac{\pi t^2}{4}} \right)\)</span>使用 <code>stem()</code> 添加以 5 Hz 频率采样的点
+   <img alt="image-20241118211107698" src="../matlab.assets/image-20241118211107698.png" /></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-58-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-58-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-58-3"> 3</a></span>
@@ -4302,11 +4259,9 @@ y\left( x \right) =\left\{ \begin{array}{c}
 <a id="__codelineno-58-36" name="__codelineno-58-36"></a><span class="n">grid</span><span class="w"> </span><span class="s">on</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <p>实际运行图：<img src="../matlab.assets/image-20241118212254167.png" alt="image-20241118212254167" style="zoom:80%;" /></p>
-<ol>
-<li>Various Contour PlotsCombine the contour techniques to generate a figure as shown below.
+<p>6.Various Contour PlotsCombine the contour techniques to generate a figure as shown below.
 各种等高线图将等高线技术相结合，生成如下图所示的图形。
-<img src="../matlab.assets/image-20241118212331916.png" alt="image-20241118212331916" style="zoom:80%;" /></li>
-</ol>
+<img src="../matlab.assets/image-20241118212331916.png" alt="image-20241118212331916" style="zoom:80%;" /></p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-59-1">1</a></span>
 <span class="normal"><a href="#__codelineno-59-2">2</a></span>
 <span class="normal"><a href="#__codelineno-59-3">3</a></span>
@@ -4326,9 +4281,7 @@ y\left( x \right) =\left\{ \begin{array}{c}
 <a id="__codelineno-59-9" name="__codelineno-59-9"></a><span class="nb">axis</span><span class="w"> </span><span class="n">square</span><span class="p">;</span><span class="w"> </span><span class="c">%axis square 函数用于调整当前坐标轴的比例，使得 x 轴和 y 轴的单位长度相等</span>
 </code></pre></div></td></tr></table></div>
 <p>实际运行图：<img src="../matlab.assets/image17347049781920.png" alt="img" style="zoom: 80%;" /></p>
-<ol>
-<li>Consider two electrocardiogram (ECG) signals with different trends. Load the signals and plot them.</li>
-</ol>
+<p>7.Consider two electrocardiogram (ECG) signals with different trends. Load the signals and plot them.</p>
 <p>考虑两个趋势不同的心电图（ECG）信号。 加载信号并绘制曲线。
   <img src="../matlab.assets/image-20241118212358437.png" alt="image-20241118212358437" style="zoom: 67%;" /></p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-60-1"> 1</a></span>
@@ -4423,9 +4376,7 @@ y\left( x \right) =\left\{ \begin{array}{c}
 </code></pre></div></td></tr></table></div>
 实际运行图：<img alt="img" src="../matlab.assets/image17347532827810.png" /></p>
 <h3 id="-_2">第四期--信号产生</h3>
-<ol>
-<li>Generates 10 seconds of a square wave with a period of π, set the sample rate to 1 kHz and specify a duty cycle of 30%. Add white Gaussian noise with a variance of 1/100 .</li>
-</ol>
+<p>1.Generates 10 seconds of a square wave with a period of π, set the sample rate to 1 kHz and specify a duty cycle of 30%. Add white Gaussian noise with a variance of 1/100 .</p>
 <p>产生 10 秒钟的方波，周期为π，设置采样率为 1 kHz，占空比为 30%。 添加方差为 1/100 的白高斯噪声。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-61-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-61-2"> 2</a></span>
@@ -4477,9 +4428,7 @@ y\left( x \right) =\left\{ \begin{array}{c}
 </code></pre></div></td></tr></table></div>
 <p><img alt="image-20241221002451410" src="../matlab.assets/image-20241221002451410.png" /></p>
 <h3 id="-_3">第五期--信号趋势去除与数据拟合</h3>
-<ol>
-<li>Remove Linear Trends from Data</li>
-</ol>
+<p>1.Remove Linear Trends from Data</p>
 <p>此示例说明如何从股票每日收盘价中去除线性趋势，以重点观察整体涨幅的价格波动。如果数据确实有趋势，则去除线性趋势会强制其均值为零并减少总体变化。该示例使用从 gallery 函数获取的分布来模拟股价波动。
    创建一个模拟数据集并计算其均值。sdata 表示股票的每日价格变动。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-62-1">1</a></span>
@@ -4530,9 +4479,7 @@ y\left( x \right) =\left\{ \begin{array}{c}
 <a id="__codelineno-67-8" name="__codelineno-67-8"></a><span class="nb">ylabel</span><span class="p">(</span><span class="s">&#39;Stock Price (dollars)&#39;</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <p><img alt="image-20241221105437019" src="../matlab.assets/image-20241221105437019.png" /></p>
-<ol>
-<li>Fit Polynomial to Set of Points 将多项式拟合到点集</li>
-</ol>
+<p>2.Fit Polynomial to Set of Points 将多项式拟合到点集</p>
 <p>Create a vector of 5 equally spaced points in the interval [1,2], and evaluate  at those points.</p>
 <p>在区间 [1,2] 内创建由 5 个等距点组成的向量，并在这些点上求值。</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Matlab</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-68-1">1</a></span>
@@ -4597,7 +4544,7 @@ y\left( x \right) =\left\{ \begin{array}{c}
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月8日 05:13:28">2025-05-08</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月8日 11:06:54">2025-05-08</span>
   </span>
 
     
@@ -4697,7 +4644,7 @@ y\left( x \right) =\left\{ \begin{array}{c}
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024~2025 Luwei
+      Copyright &copy; 2024-2025 Luwei
     </div>
   
   

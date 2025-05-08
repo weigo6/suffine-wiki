@@ -1544,8 +1544,6 @@
 <li>排队时延</li>
 </ul>
 <p>数据包在中间结点输入队列等待排队处理产生的时延；处理完后，在输出队列等待转发而产生的时延。</p>
-</li>
-</ol>
 <table>
 <thead>
 <tr>
@@ -1573,7 +1571,7 @@
 </tr>
 </tbody>
 </table>
-<ol>
+</li>
 <li>
 <p>网络五层体系结构，各层的作用。P12－14</p>
 <ul>
@@ -1669,9 +1667,7 @@
 <li>
 <p>网络层协议ARP和RARP的工作原理与不同之处。P116－117</p>
 <p>ARP（地址解析协议）和RARP（逆地址解析协议）是两种用于解析网络层地址和数据链路层地址的协议。</p>
-<ul>
-<li>ARP工作原理：</li>
-</ul>
+<p>ARP工作原理：</p>
 <p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
 <span class="normal"><a href="#__codelineno-0-3">3</a></span>
@@ -1680,23 +1676,23 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="mf">3.</span><span class="w"> </span><span class="n">设备B会向设备A发送一个ARP响应</span><span class="err">，</span><span class="n">这个响应包含了设备B的MAC地址</span><span class="err">。</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="mf">4.</span><span class="w"> </span><span class="n">设备A接收到ARP响应后</span><span class="err">，</span><span class="n">将设备B的IP地址和MAC地址存储在它的ARP缓存中</span><span class="err">，</span><span class="n">以便后续的通信</span><span class="err">。</span>
 </code></pre></div></td></tr></table></div>
-- RARP工作原理：
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+RARP工作原理：</p>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
-<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="mf">1.</span><span class="w"> </span><span class="n">当设备启动并连接到网络时</span><span class="err">，</span><span class="n">它可能不知道自己的IP地址</span><span class="err">。</span><span class="n">在这种情况下</span><span class="err">，</span><span class="n">设备可以</span><span class="w">  </span><span class="n">发送一个RARP请求广播到网络上</span><span class="err">。</span><span class="n">这个RARP请求包含了设备的MAC地址</span><span class="err">。</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="mf">2.</span><span class="w"> </span><span class="n">网络上的RARP服务器会接收到这个请求</span><span class="err">，</span><span class="n">并根据设备的MAC地址查找对应的IP地址</span><span class="err">。</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="mf">3.</span><span class="w"> </span><span class="n">RARP服务器向设备发送一个RARP响应</span><span class="err">，</span><span class="n">这个响应包含了设备的IP地址</span><span class="err">。</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="mf">4.</span><span class="w"> </span><span class="n">设备接收到RARP响应后</span><span class="err">，</span><span class="n">将自己的IP地址存储在本地</span><span class="err">，</span><span class="n">以便后续的通信</span><span class="err">。</span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="mf">5.</span><span class="w"> </span><span class="n">当设备启动并连接到网络时</span><span class="err">，</span><span class="n">它可能不知道自己的IP地址</span><span class="err">。</span><span class="n">在这种情况下</span><span class="err">，</span><span class="n">设备可以</span><span class="w">  </span><span class="n">发送一个RARP请求广播到网络上</span><span class="err">。</span><span class="n">这个RARP请求包含了设备的MAC地址</span><span class="err">。</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="mf">6.</span><span class="w"> </span><span class="n">网络上的RARP服务器会接收到这个请求</span><span class="err">，</span><span class="n">并根据设备的MAC地址查找对应的IP地址</span><span class="err">。</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="mf">7.</span><span class="w"> </span><span class="n">RARP服务器向设备发送一个RARP响应</span><span class="err">，</span><span class="n">这个响应包含了设备的IP地址</span><span class="err">。</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="mf">8.</span><span class="w"> </span><span class="n">设备接收到RARP响应后</span><span class="err">，</span><span class="n">将自己的IP地址存储在本地</span><span class="err">，</span><span class="n">以便后续的通信</span><span class="err">。</span>
 </code></pre></div></td></tr></table></div>
 不同之处：</p>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="mf">1.</span><span class="w"> </span><span class="n">用途不同</span><span class="err">：</span><span class="n">ARP用于将32位的IP地址解析为48位的以太网地址</span><span class="err">（</span><span class="n">或其他数据链路层地址</span><span class="err">），</span><span class="n">而RARP则用于将48位的以太网地址解析为32位的IP地址</span><span class="err">。</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="mf">2.</span><span class="w"> </span><span class="n">发送方不同</span><span class="err">：</span><span class="n">ARP请求通常由需要与目标设备进行通信的设备发送</span><span class="err">，</span><span class="n">而RARP请求则由不知道自己IP地址的设备发送</span><span class="err">。</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="mf">3.</span><span class="w"> </span><span class="n">响应方不同</span><span class="err">：</span><span class="n">ARP响应由目标设备发送</span><span class="err">，</span><span class="n">它包含了目标设备的MAC地址</span><span class="err">；</span><span class="n">而RARP响应由RARP服务器发送</span><span class="err">，</span><span class="n">它包含了设备的IP地址</span><span class="err">。</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="mf">4.</span><span class="w"> </span><span class="n">使用场景不同</span><span class="err">：</span><span class="n">在现代网络中</span><span class="err">，</span><span class="n">大多数设备在启动时通过DHCP协议获取IP地址</span><span class="err">，</span><span class="n">因此RARP的使用已经相对较少</span><span class="err">。</span><span class="n">而ARP在网络通信中仍然广泛使用</span><span class="err">，</span><span class="n">用于解析目标设备的MAC地址</span><span class="err">。</span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="mf">9.</span><span class="w"> </span><span class="n">用途不同</span><span class="err">：</span><span class="n">ARP用于将32位的IP地址解析为48位的以太网地址</span><span class="err">（</span><span class="n">或其他数据链路层地址</span><span class="err">），</span><span class="n">而RARP则用于将48位的以太网地址解析为32位的IP地址</span><span class="err">。</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="mf">10.</span><span class="w"> </span><span class="n">发送方不同</span><span class="err">：</span><span class="n">ARP请求通常由需要与目标设备进行通信的设备发送</span><span class="err">，</span><span class="n">而RARP请求则由不知道自己IP地址的设备发送</span><span class="err">。</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="mf">11.</span><span class="w"> </span><span class="n">响应方不同</span><span class="err">：</span><span class="n">ARP响应由目标设备发送</span><span class="err">，</span><span class="n">它包含了目标设备的MAC地址</span><span class="err">；</span><span class="n">而RARP响应由RARP服务器发送</span><span class="err">，</span><span class="n">它包含了设备的IP地址</span><span class="err">。</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="mf">12.</span><span class="w"> </span><span class="n">使用场景不同</span><span class="err">：</span><span class="n">在现代网络中</span><span class="err">，</span><span class="n">大多数设备在启动时通过DHCP协议获取IP地址</span><span class="err">，</span><span class="n">因此RARP的使用已经相对较少</span><span class="err">。</span><span class="n">而ARP在网络通信中仍然广泛使用</span><span class="err">，</span><span class="n">用于解析目标设备的MAC地址</span><span class="err">。</span>
 </code></pre></div></td></tr></table></div>
 </li>
 <li>
@@ -1714,35 +1710,34 @@
 <li>
 <p>动态路由协议分为<u>链路状态路由协议</u>和<u>距离向量路由协议</u>两大类，OSPF属于链路状态路由协议、RIP属于距离向量路由协议。特点。P132，P138</p>
 <p>OSPF协议的特点：</p>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="mf">1.</span><span class="w"> </span><span class="n">链路状态路由协议</span><span class="err">：</span><span class="n">OSPF使用链路状态算法</span><span class="err">，</span><span class="n">路由器通过收集并维护网络中所有路由器的链路状态信息来计算最佳路径</span><span class="err">。</span><span class="n">这意味着每个路由器都具有网络的完整视图</span><span class="err">。</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="mf">2.</span><span class="w"> </span><span class="n">快速收敛</span><span class="err">：</span><span class="n">由于OSPF使用Dijkstra算法来计算最短路径</span><span class="err">，</span><span class="n">因此它通常比RIP更快地收敛到网络变化</span><span class="err">。</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="mf">3.</span><span class="w"> </span><span class="n">支持大型网络</span><span class="err">：</span><span class="n">OSPF通过划分网络为区域</span><span class="err">（</span><span class="n">areas</span><span class="err">）</span><span class="n">来支持大型网络</span><span class="err">，</span><span class="n">这有助于减少路由表的规模和路由计算的复杂性</span><span class="err">。</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="mf">4.</span><span class="w"> </span><span class="n">支持多种路径</span><span class="err">：</span><span class="n">OSPF支持等价多路径</span><span class="err">（</span><span class="n">ECMP</span><span class="err">），</span><span class="n">这意味着它可以在多条等价路径之间平衡流量</span><span class="err">。</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="mf">5.</span><span class="w"> </span><span class="n">使用组播和单播</span><span class="err">：</span><span class="n">OSPF使用组播地址来发送链路状态更新</span><span class="err">，</span><span class="n">这减少了不必要的网络流量</span><span class="err">。</span><span class="n">它也支持使用单播进行通信</span><span class="err">。</span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>1. 链路状态路由协议：OSPF使用链路状态算法，路由器通过收集并维护网络中所有路由器的链路状态信息来计算最佳路径。这意味着每个路由器都具有网络的完整视图。
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>2. 快速收敛：由于OSPF使用Dijkstra算法来计算最短路径，因此它通常比RIP更快地收敛到网络变化。
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>3. 支持大型网络：OSPF通过划分网络为区域（areas）来支持大型网络，这有助于减少路由表的规模和路由计算的复杂性。
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>4. 支持多种路径：OSPF支持等价多路径（ECMP），这意味着它可以在多条等价路径之间平衡流量。
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>5. 使用组播和单播：OSPF使用组播地址来发送链路状态更新，这减少了不必要的网络流量。它也支持使用单播进行通信。
 </code></pre></div></td></tr></table></div>
 RIP协议的特点：</p>
-</li>
-</ol>
-<p><div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">C</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
 <span class="normal"><a href="#__codelineno-4-2">2</a></span>
 <span class="normal"><a href="#__codelineno-4-3">3</a></span>
 <span class="normal"><a href="#__codelineno-4-4">4</a></span>
 <span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="w">    </span><span class="mf">1.</span><span class="w"> </span><span class="n">距离向量路由协议</span><span class="err">：</span><span class="n">RIP是一种基于距离向量的路由协议</span><span class="err">，</span><span class="n">路由器通过定期</span><span class="err">（</span><span class="n">例如</span><span class="err">，</span><span class="n">每隔30秒</span><span class="err">）</span><span class="n">向相邻路由器发送其完整的路由表来交换路由信息</span><span class="err">。</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="mf">2.</span><span class="w"> </span><span class="n">简单易用</span><span class="err">：</span><span class="n">RIP配置相对简单</span><span class="err">，</span><span class="n">适用于小型网络</span><span class="err">。</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="mf">3.</span><span class="w"> </span><span class="n">基于跳数</span><span class="err">：</span><span class="n">RIP使用跳数</span><span class="err">（</span><span class="n">最大15跳</span><span class="err">）</span><span class="n">作为路径度量</span><span class="err">，</span><span class="n">不考虑其他因素如带宽或延迟</span><span class="err">。</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="mf">4.</span><span class="w"> </span><span class="n">定期更新</span><span class="err">：</span><span class="n">RIP路由器定期发送更新</span><span class="err">，</span><span class="n">无论网络是否发生变化</span><span class="err">。</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="mf">5.</span><span class="w"> </span><span class="n">可能存在路由环路</span><span class="err">：</span><span class="n">由于RIP的工作方式</span><span class="err">，</span><span class="n">它可能会遇到路由环路问题</span><span class="err">，</span><span class="n">尽管有一些机制</span><span class="err">（</span><span class="n">如分割水平和毒逆</span><span class="err">）</span><span class="n">试图解决这个问题</span><span class="err">。</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="mf">6.</span><span class="w"> </span><span class="n">不适用于大型网络</span><span class="err">：</span><span class="n">由于RIP的跳数限制和定期更新的方式</span><span class="err">，</span><span class="n">它不适合用于大型或复杂的网络</span><span class="err">。</span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>6. 距离向量路由协议：RIP是一种基于距离向量的路由协议，路由器通过定期（例如，每隔30秒）向相邻路由器发送其完整的路由表来交换路由信息。
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>7. 简单易用：RIP配置相对简单，适用于小型网络。
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>8. 基于跳数：RIP使用跳数（最大15跳）作为路径度量，不考虑其他因素如带宽或延迟。
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>9. 定期更新：RIP路由器定期发送更新，无论网络是否发生变化。
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>10. 可能存在路由环路：由于RIP的工作方式，它可能会遇到路由环路问题，尽管有一些机制（如分割水平和毒逆）试图解决这个问题。
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>11. 不适用于大型网络：由于RIP的跳数限制和定期更新的方式，它不适合用于大型或复杂的网络。
 </code></pre></div></td></tr></table></div>
-11. TCP是面向连接的运输层协议，三次握手建立连接、四次握手释放连接。画图并说明。P188－190</p>
-<div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Text Only</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>![](./计算机网络复习笔记.assets/TCP示意图.png)
-</code></pre></div></td></tr></table></div>
-<ol>
+</li>
+<li>
+<p>TCP是面向连接的运输层协议，三次握手建立连接、四次握手释放连接。画图并说明。P188－190</p>
+<p><img alt="img" src="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0.assets/TCP%E7%A4%BA%E6%84%8F%E5%9B%BE.png" /></p>
+</li>
 <li>
 <p>电子邮件协议中SMTP发邮件、POP3收邮件、MIME可以添加附件。邮件收发中这些协议的工作过程。P218－221</p>
 <p>发件人——&gt;发件服务器——SMTP——&gt;收件服务器——POP3/IMAP——&gt;收件人</p>
@@ -1907,7 +1902,7 @@ RIP协议的特点：</p>
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月6日 08:20:09">2025-05-06</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月8日 11:06:54">2025-05-08</span>
   </span>
 
     
@@ -2007,7 +2002,7 @@ RIP协议的特点：</p>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2024~2025 Luwei
+      Copyright &copy; 2024-2025 Luwei
     </div>
   
   
