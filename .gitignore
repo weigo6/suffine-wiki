@@ -1,4 +1,8 @@
-# 忽略 site 文件夹
+# 忽略 passwords.yml、encryptcontent.cache
+passwords.yml
+encryptcontent.cache
+
+# 忽略 site 文件夹和一些缓存文件
 site/
 .venv/
 .cache/

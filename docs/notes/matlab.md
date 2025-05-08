@@ -87,10 +87,11 @@ B = A{5}
 ### 结构体
 
 ```matlab
-books = struct('name',{{'Machine Learning'，{'data mining'}},'price',[30 40])
-books.name %属性
-books.name(1) %返回cell
-books.name{1} %返回值
+% 修正 struct 函数的参数格式，将 name 字段值设为元胞数组
+books = struct('name', {'Machine Learning', 'data mining'}, 'price', [30 40]);
+books.name % 属性
+books.name(1) % 返回 cell
+books.name{1} % 返回值
 ```
 
 ### 矩阵操作

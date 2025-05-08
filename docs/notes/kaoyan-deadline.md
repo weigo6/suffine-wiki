@@ -10,8 +10,8 @@ tags:
 
 <body>
 <center>
-<font color="#4351AF" size=6 >
   <h1>26考研初试倒计时</h1>
+  <font color="#4351AF" size=6 >
   <div id="countdown"></div>
 
   <script>

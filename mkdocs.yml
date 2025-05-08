@@ -35,6 +35,7 @@ nav:
       - 西门子杯-工业硬件研发: notes/西门子杯.md
   - 考研 Study:
       - 考研倒计时: notes/kaoyan-deadline.md
+      - 学习日记: notes/kaoyan-diary.md
   - 标签索引: tags.md
   - 留言板: massage.md
   - 友链: 
@@ -64,14 +65,14 @@ theme:
       primary: indigo
       accent: indigo
       toggle:
-        icon: material/weather-sunny
+        icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: black
       toggle:
-        icon: material/weather-night
+        icon: material/weather-sunny
         name: Switch to light mode
 
 copyright: Copyright &copy; 2024~2025 Luwei # 左下角的版权声明
@@ -118,12 +119,18 @@ plugins:
   # - git-committers: # 显示贡献者
   #     repository: weigo6/suffine-wiki
   #     branch: main
+  #     exclude:
+  #       - index.md
+  #       - tags.md
+  #       - link.md
+  #       - massage.md
   - git-authors: # 显示文档作者
       exclude:
         - index.md
         - tags.md
         - link.md
         - massage.md
+  - macros  # 添加 macros 插件，以渲染jinja2语法
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -146,3 +153,4 @@ extra:
       link: https://gitee.com/weigo6
     - icon: fontawesome/brands/github
       link: https://github.com/weigo6
+  comment_auth_code: 2004  # 定义授权码
