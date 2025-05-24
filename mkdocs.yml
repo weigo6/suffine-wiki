@@ -17,18 +17,23 @@ nav:
           - 轨道交通信号基础（二）: notes/轨道交通信号基础期末.md
           - 车站信号控制系统: notes/车站信号控制系统.md
           - 区间信号自动控制: notes/区间信号自动控制.md
-      - Matlab入门教程: notes/matlab.md
-      - 计算机网络原理: notes/计算机网络复习笔记.md
-      - 数字电压表设计: notes/数字电压表课程设计.md      
-      - 毛概知识点整理备考: notes/毛概笔记期末备考.md
-      - 苏州评弹鉴赏: notes/苏州评弹.md
+      - 专业课程:
+          - Matlab入门教程: notes/matlab.md
+          - 计算机网络原理: notes/计算机网络复习笔记.md
+          - 数字电压表设计: notes/数字电压表课程设计.md      
+          - 毛概知识点整理备考: notes/毛概笔记期末备考.md
+          - 苏州评弹鉴赏: notes/苏州评弹.md
   - 开源分享:
-      - 电子名片搭建: notes/个人简历.md
-      - 卡西欧计算器使用: notes/卡西欧fx-991使用技巧.md
-      - 硬件学习笔记: notes/硬件学习笔记.md
-      - Markdown与Typora学习笔记: notes/Typora教程.md
-      - Turbot4机器人开发: notes/Turbot4机器人开发.md
-      - 旋转音律视频稳定工具: notes/旋转音律视频稳定工具.md
+      - 学习笔记:
+          - 硬件学习笔记: notes/硬件学习笔记.md
+          - Markdown与Typora学习笔记: notes/Typora教程.md
+          - 卡西欧计算器使用: notes/卡西欧fx-991使用技巧.md
+          - LaTeX数学语法学习: notes/LaTeX-math.md
+      - 项目分享:
+          - 电子名片搭建: notes/个人简历.md
+          - Turbot4机器人开发: notes/Turbot4机器人开发.md
+          - 旋转音律视频稳定工具: notes/旋转音律视频稳定工具.md
+      
   - 嵌入式开发:
       - 2024全国大学生电子设计竞赛H题: notes/24电赛H.md
       - 蓝桥杯嵌入式学习笔记: notes/蓝桥杯嵌入式学习笔记.md
@@ -51,6 +56,7 @@ theme:
   features:
     - navigation.tabs
     - navigation.top
+    - navigation.sections
     - search.highlight
     - search.suggest
     - search.share #搜索分享按钮
@@ -60,6 +66,10 @@ theme:
     - navigation.footer # 页脚 指向当前页面上一页和下一页的链接
     - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
   palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/theme-light-dark
+        name: Disable automatic mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: indigo
@@ -80,6 +90,9 @@ copyright: Copyright &copy; 2024-2025 Luwei # 左下角的版权声明
 markdown_extensions:
   # 脚注支持  
   - footnotes
+  # 在每个标题的末尾添加段落符 ¶
+  - toc:
+      permalink: true
   # 任务列表支持
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -94,6 +107,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.caret # 上标、插入符号
   - pymdownx.details #可折叠细节块
   - admonition  # 添加此扩展以支持注解
   - md_in_html  #grid等语法引入
