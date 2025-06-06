@@ -33,6 +33,7 @@ nav:
           - 电子名片搭建: notes/个人简历.md
           - Turbot4机器人开发: notes/Turbot4机器人开发.md
           - 旋转音律视频稳定工具: notes/旋转音律视频稳定工具.md
+          - Python文件查重程序: notes/Python查重程序.md
       
   - 嵌入式开发:
       - 2024全国大学生电子设计竞赛H题: notes/24电赛H.md

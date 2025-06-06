@@ -6,6 +6,13 @@ tags:
 {% raw %}
 # LaTeX数学语法学习
 
+## 关于LaTex
+LaTeX 是一种基于 TEX 的排版系统，以其强大的排版能力和对数学公式、科学符号的完美支持而闻名，广泛应用于学术论文、书籍出版等领域。其优势在于能够将内容与格式分离，通过编写简单的文本代码，结合特定的宏包和命令，生成高质量的排版文档，尤其在处理复杂数学公式和专业符号时，表现出无可比拟的精确性和美观性。
+
+Markdown 是一种轻量级标记语言，旨在让人们 “易读易写”，专注于内容本身。而在 Markdown 中引入 LaTeX 语法，极大地拓展了其功能。许多 Markdown 编辑器和平台，如 Typora、GitHub 等，都支持嵌入 LaTeX 代码来渲染数学公式和特殊符号。
+
+例如，在 Typora 中，只需将 LaTeX 数学公式代码包裹在美元符号`$`中（行内公式）或使用`$$`包裹（独占一行的公式），就能直接渲染出美观的公式。以二次方程的求根公式为例，在 Markdown 中输入`$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$`，即可呈现出标准的数学公式排版效果。这种将 LaTeX 融入 Markdown 的方式，使得科研人员、学生等群体能够在简洁的 Markdown 环境中，方便地编写包含复杂公式的文档。
+
 ## 基础语法
 ### 行内公式与块公式
 ```latex
@@ -233,7 +240,7 @@ $$
     ```latex
     $$
     \frac{1}{2},\frac 1 2,\\
-    \frac 1 {x+y}\\
+    \frac 1 {x+y},\\
     \frac {\dfrac 1 x + 1}{y + 1}
     $$
 
@@ -244,7 +251,7 @@ $$
 
 $$
 \frac{1}{2},\frac 1 2,\\
-\frac 1 {x+y}\\
+\frac 1 {x+y},\\
 \frac {\dfrac 1 x + 1}{y + 1}
 $$
 
@@ -330,8 +337,8 @@ $$
 ??? latex
     ```latex
     $$
-    \sum,\prod\\
-    \sum_i,\sum_{i=0}^N\\
+    \sum,\prod,\\
+    \sum_i,\sum_{i=0}^N,\\
     \frac{\sum\limits_{i=1}^n x_i}{\prod\limits_{i=1}^n x_i}
     $$
 
@@ -351,8 +358,8 @@ $$
     ```
 
 $$
-\sum,\prod\\
-\sum_i,\sum_{i=0}^N\\
+\sum,\prod,\\
+\sum_i,\sum_{i=0}^N,\\
 \frac{\sum\limits_{i=1}^n x_i}{\prod\limits_{i=1}^n x_i}
 $$
 
@@ -559,7 +566,10 @@ $$
     ```
 
 $$
-f(x) = \frac 1 {\sqrt{2\pi} \sigma} {\rm e} ^ {-\frac {(x-\mu)^2}{2\sigma ^ 2}}\\
+f(x) = \frac 1 {\sqrt{2\pi} \sigma} {\rm e} ^ {-\frac {(x-\mu)^2}{2\sigma ^ 2}}
+$$
+
+$$
 f(x) = \frac 1 {\sqrt{2\pi} \sigma} \exp \left[ {-\frac {(x-\mu)^2}{2\sigma ^ 2}}\right]
 $$
 
