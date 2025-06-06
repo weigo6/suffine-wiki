@@ -1086,6 +1086,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#latex_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      关于LaTex
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       基础语法
@@ -1417,6 +1426,29 @@
   
   <span class="md-ellipsis">
     旋转音律视频稳定工具
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python%E6%9F%A5%E9%87%8D%E7%A8%8B%E5%BA%8F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python文件查重程序
     
   </span>
   
@@ -1824,6 +1856,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#latex_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      关于LaTex
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
       基础语法
@@ -2076,6 +2117,10 @@
 
 
 <h1 id="latex">LaTeX数学语法学习<a class="headerlink" href="#latex" title="Permanent link">&para;</a></h1>
+<h2 id="latex_1">关于LaTex<a class="headerlink" href="#latex_1" title="Permanent link">&para;</a></h2>
+<p>LaTeX 是一种基于 TEX 的排版系统，以其强大的排版能力和对数学公式、科学符号的完美支持而闻名，广泛应用于学术论文、书籍出版等领域。其优势在于能够将内容与格式分离，通过编写简单的文本代码，结合特定的宏包和命令，生成高质量的排版文档，尤其在处理复杂数学公式和专业符号时，表现出无可比拟的精确性和美观性。</p>
+<p>Markdown 是一种轻量级标记语言，旨在让人们 “易读易写”，专注于内容本身。而在 Markdown 中引入 LaTeX 语法，极大地拓展了其功能。许多 Markdown 编辑器和平台，如 Typora、GitHub 等，都支持嵌入 LaTeX 代码来渲染数学公式和特殊符号。</p>
+<p>例如，在 Typora 中，只需将 LaTeX 数学公式代码包裹在美元符号<code>$</code>中（行内公式）或使用<code>$$</code>包裹（独占一行的公式），就能直接渲染出美观的公式。以二次方程的求根公式为例，在 Markdown 中输入<code>$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$</code>，即可呈现出标准的数学公式排版效果。这种将 LaTeX 融入 Markdown 的方式，使得科研人员、学生等群体能够在简洁的 Markdown 环境中，方便地编写包含复杂公式的文档。</p>
 <h2 id="_1">基础语法<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <h3 id="_2">行内公式与块公式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <div class="highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">TeX</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -2360,7 +2405,7 @@ x_i,x_{\text i}\\
 <span class="normal"><a href="#__codelineno-9-8">8</a></span>
 <span class="normal"><a href="#__codelineno-9-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="sb">$$</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nv">\frac</span><span class="nb">{</span><span class="m">1</span><span class="nb">}{</span><span class="m">2</span><span class="nb">},</span><span class="nv">\frac</span><span class="nb"> </span><span class="m">1</span><span class="nb"> </span><span class="m">2</span><span class="nb">,</span><span class="nv">\\</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="nv">\frac</span><span class="nb"> </span><span class="m">1</span><span class="nb"> {x</span><span class="o">+</span><span class="nb">y}</span><span class="nv">\\</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="nv">\frac</span><span class="nb"> </span><span class="m">1</span><span class="nb"> {x</span><span class="o">+</span><span class="nb">y},</span><span class="nv">\\</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="nv">\frac</span><span class="nb"> {</span><span class="nv">\dfrac</span><span class="nb"> </span><span class="m">1</span><span class="nb"> x </span><span class="o">+</span><span class="nb"> </span><span class="m">1</span><span class="nb">}{y </span><span class="o">+</span><span class="nb"> </span><span class="m">1</span><span class="nb">}</span>
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="s">$$</span>
 <a id="__codelineno-9-6" name="__codelineno-9-6"></a>
@@ -2371,7 +2416,7 @@ x_i,x_{\text i}\\
 </details>
 <div class="arithmatex">\[
 \frac{1}{2},\frac 1 2,\\
-\frac 1 {x+y}\\
+\frac 1 {x+y},\\
 \frac {\dfrac 1 x + 1}{y + 1}
 \]</div>
 <div class="arithmatex">\[
@@ -2501,8 +2546,8 @@ x_i,x_{\text i}\\
 <span class="normal"><a href="#__codelineno-11-17">17</a></span>
 <span class="normal"><a href="#__codelineno-11-18">18</a></span>
 <span class="normal"><a href="#__codelineno-11-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="sb">$$</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="nv">\sum</span><span class="nb">,</span><span class="nv">\prod\\</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="nv">\sum</span><span class="nb">_i,</span><span class="nv">\sum</span><span class="nb">_{i</span><span class="o">=</span><span class="m">0</span><span class="nb">}^N</span><span class="nv">\\</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="nv">\sum</span><span class="nb">,</span><span class="nv">\prod</span><span class="nb">,</span><span class="nv">\\</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="nv">\sum</span><span class="nb">_i,</span><span class="nv">\sum</span><span class="nb">_{i</span><span class="o">=</span><span class="m">0</span><span class="nb">}^N,</span><span class="nv">\\</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="nv">\frac</span><span class="nb">{</span><span class="nv">\sum\limits</span><span class="nb">_{i</span><span class="o">=</span><span class="m">1</span><span class="nb">}^n x_i}{</span><span class="nv">\prod\limits</span><span class="nb">_{i</span><span class="o">=</span><span class="m">1</span><span class="nb">}^n x_i}</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="s">$$</span>
 <a id="__codelineno-11-6" name="__codelineno-11-6"></a>
@@ -2522,8 +2567,8 @@ x_i,x_{\text i}\\
 </code></pre></div></td></tr></table></div>
 </details>
 <div class="arithmatex">\[
-\sum,\prod\\
-\sum_i,\sum_{i=0}^N\\
+\sum,\prod,\\
+\sum_i,\sum_{i=0}^N,\\
 \frac{\sum\limits_{i=1}^n x_i}{\prod\limits_{i=1}^n x_i}
 \]</div>
 <div class="arithmatex">\[
@@ -2790,7 +2835,9 @@ e &amp; f&amp; \cdots &amp; g
 </code></pre></div></td></tr></table></div>
 </details>
 <div class="arithmatex">\[
-f(x) = \frac 1 {\sqrt{2\pi} \sigma} {\rm e} ^ {-\frac {(x-\mu)^2}{2\sigma ^ 2}}\\
+f(x) = \frac 1 {\sqrt{2\pi} \sigma} {\rm e} ^ {-\frac {(x-\mu)^2}{2\sigma ^ 2}}
+\]</div>
+<div class="arithmatex">\[
 f(x) = \frac 1 {\sqrt{2\pi} \sigma} \exp \left[ {-\frac {(x-\mu)^2}{2\sigma ^ 2}}\right]
 \]</div>
 <div class="arithmatex">\[
@@ -2835,7 +2882,7 @@ x(n) = \frac 1 {2\pi} \int _{-π} ^ π X\left( {\rm e} ^ {{\rm j} \omega } \righ
     <span class="md-icon" title="最后更新">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年5月24日 04:04:35">2025-05-24</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="2025年6月6日 11:15:55">2025-06-06</span>
   </span>
 
     
