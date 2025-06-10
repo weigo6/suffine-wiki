@@ -6,3 +6,4 @@ encryptcontent.cache
 site/
 .venv/
 .cache/
+__pycache__/

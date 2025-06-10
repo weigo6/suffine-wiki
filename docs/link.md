@@ -70,7 +70,7 @@
           </div>
         </div>
         <div class="card">
-          <img class="ava" src="https://resume-github.netlify.app/pic.png" /> 
+          <img class="ava" src="https://picbox.rutno.com/uploads/68444edfa6c4c.png" /> 
           <div class="card-header">
             <div>
               <a href="https://resume-github.netlify.app/" target="_blank">Resume-github</a>

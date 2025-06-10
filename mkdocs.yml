@@ -23,6 +23,7 @@ nav:
           - 数字电压表设计: notes/数字电压表课程设计.md      
           - 毛概知识点整理备考: notes/毛概笔记期末备考.md
           - 苏州评弹鉴赏: notes/苏州评弹.md
+          - 交通话题英语学习: notes/交通英语讲稿.md
   - 开源分享:
       - 学习笔记:
           - 硬件学习笔记: notes/硬件学习笔记.md
@@ -169,3 +170,6 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/weigo6
   comment_auth_code: 2004  # 定义授权码
+
+hooks:
+  - docs/overrides/hooks/reading_time.py    # 阅读时间统计
